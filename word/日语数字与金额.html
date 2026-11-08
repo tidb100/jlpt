@@ -75,7 +75,7 @@ h2 { font-family: var(--jp); font-weight: 900; font-size: 1.3rem; margin: 0 0 4p
     <h1>かず · 数字与金额<small>数字 0–10、十百千万、日元价格，点 ▶ 听发音</small></h1>
     <div class="tools">
       <button id="playAll" type="button">▶ 全部播放</button>
-      <button id="loop" type="button" aria-pressed="false">循环播放</button>
+      <button id="loop" type="button" aria-pressed="false" title="最长循环 30 分钟，到时自动停止">循环播放 · 30分钟</button>
       <button id="slow" type="button" aria-pressed="false">慢速</button>
       <button id="quiz" type="button" aria-pressed="false">遮住读音</button>
     </div>
@@ -209,14 +209,21 @@ let loop = false, active = false;
 const playAllBtn = document.getElementById("playAll");
 const wait = ms => new Promise(r => setTimeout(r, ms));
 function setRunning(on) { active = on; playAllBtn.textContent = on ? "■ 停止" : "▶ 全部播放"; }
+const LOOP_MAX_MS = 30 * 60 * 1000;  // 循环播放最长 30 分钟，到时自动停止
+function flash(msg) {
+  const base = note.textContent;
+  note.textContent = msg;
+  setTimeout(() => { if (note.textContent === msg) note.textContent = base; }, 10000);
+}
 async function runQueue(items) {
   stopAll();
-  const my = session;
+  const my = session, start = Date.now();
   setRunning(true);
   do {
     for (const it of items) {
       await say(it.text, it.i);
       if (my !== session) return;
+      if (loop && Date.now() - start >= LOOP_MAX_MS) { setRunning(false); flash("已循环播放 30 分钟，自动停止。"); return; }
       await wait(items.length > 1 ? 500 : 900);
       if (my !== session) return;
     }
