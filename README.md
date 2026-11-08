@@ -9,15 +9,19 @@ jlpt/
 ├── index.html              # 支持手机阅读的资源导航主页
 ├── README.md
 └── word/
+    ├── 五十音记忆表.html
+    ├── 东京寿司店日语.html
     ├── 日语数字与金额.html
     └── 日语颜色十词.html
 ```
 
-两个学习页面从根目录原样移动至 `word/`，内容未作修改。主页使用相对链接，适用于项目站点和本地打开。
+四个学习页面存放于 `word/`。更新学习资料时，将 HTML 上传至此目录并覆盖同名文件，再同步更新导航主页和本说明。主页使用相对链接，适用于项目站点和本地打开。
 
 ## GitHub Pages 访问地址
 
 - 项目主页：https://tidb100.github.io/jlpt/
+- [五十音记忆表](https://tidb100.github.io/jlpt/word/五十音记忆表.html)
+- [东京寿司店日语](https://tidb100.github.io/jlpt/word/东京寿司店日语.html)
 - [日语数字与金额](https://tidb100.github.io/jlpt/word/日语数字与金额.html)
 - [日语颜色十词](https://tidb100.github.io/jlpt/word/日语颜色十词.html)
 
