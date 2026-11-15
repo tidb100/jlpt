@@ -12,10 +12,11 @@ jlpt/
     ├── 五十音记忆表.html
     ├── 东京寿司店日语.html
     ├── 日语数字与金额.html
+    ├── 日语日期与时间.html
     └── 日语颜色十词.html
 ```
 
-四个学习页面存放于 `word/`。更新学习资料时，将 HTML 上传至此目录并覆盖同名文件，再同步更新导航主页和本说明。主页使用相对链接，适用于项目站点和本地打开。
+五个学习页面存放于 `word/`。更新学习资料时，将 HTML 上传至此目录并覆盖同名文件，再同步更新导航主页和本说明。主页使用相对链接，适用于项目站点和本地打开。
 
 ## GitHub Pages 访问地址
 
@@ -23,6 +24,7 @@ jlpt/
 - [五十音记忆表](https://tidb100.github.io/jlpt/word/五十音记忆表.html)
 - [东京寿司店日语](https://tidb100.github.io/jlpt/word/东京寿司店日语.html)
 - [日语数字与金额](https://tidb100.github.io/jlpt/word/日语数字与金额.html)
+- [日语日期与时间](https://tidb100.github.io/jlpt/word/日语日期与时间.html)
 - [日语颜色十词](https://tidb100.github.io/jlpt/word/日语颜色十词.html)
 
 `https://tidb100.github.io/` 是账号根站点，通常由 `tidb100.github.io` 仓库提供；本仓库 `jlpt` 对应 `/jlpt/` 项目路径。GitHub 仓库中的文件预览地址显示源代码，在线阅读请使用上面的 Pages 地址。
