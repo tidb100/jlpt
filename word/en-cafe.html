@@ -1,0 +1,134 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>咖啡店英语</title>
+<meta name="deck:lang" content="en">
+<style>
+/* 英语分组示例：版式与日语分组一致（标题 + 小节说明 + 卡片网格），卡片上方的色块显示单词，下方是音标、词性、中文和例句 */
+:root {
+  --bg: #f6f5f2; --card: #ffffff; --fg: #22211f; --muted: #6d6a64; --line: #e2dfd8; --accent: #1e50a2;
+  --plate-a: #e8eef9; --plate-b: #f4ecdc; --plate-c: #e7f2ea; --tag: #b3401f;
+  --en: "Avenir Next", "Segoe UI", "Helvetica Neue", Arial, sans-serif;
+  --zh: "PingFang SC", "Noto Sans SC", "Microsoft YaHei", sans-serif;
+  color-scheme: light;
+}
+@media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) {
+  --bg: #171716; --card: #222120; --fg: #efede8; --muted: #a29e96; --line: #36342f; --accent: #8fb0ea;
+  --plate-a: #1f2a3d; --plate-b: #382f22; --plate-c: #1f3326; --tag: #f0936f; color-scheme: dark } }
+:root[data-theme="dark"] {
+  --bg: #171716; --card: #222120; --fg: #efede8; --muted: #a29e96; --line: #36342f; --accent: #8fb0ea;
+  --plate-a: #1f2a3d; --plate-b: #382f22; --plate-c: #1f3326; --tag: #f0936f; color-scheme: dark }
+* { box-sizing: border-box; }
+body { margin: 0; background: var(--bg); color: var(--fg); font: 14px/1.5 var(--zh); }
+.wrap { max-width: 1040px; margin: 0 auto; padding: 32px max(16px, env(safe-area-inset-right)) 48px max(16px, env(safe-area-inset-left)); }
+h1 { font-family: var(--en); font-weight: 800; font-size: 2rem; margin: 0 0 12px; }
+h1 small { display: block; font-family: var(--zh); font-weight: 500; font-size: .95rem; color: var(--muted); margin-top: 4px; }
+button { font: inherit; cursor: pointer; border-radius: 999px; border: 1px solid var(--line); background: var(--card); color: var(--fg); padding: 6px 12px; font-size: .85rem; }
+button:hover { border-color: var(--accent); }
+section { margin-top: 28px; }
+h2 { font-size: 1.3rem; margin: 0 0 4px; }
+.rule { font-size: .88rem; color: var(--muted); margin: 0 0 14px; max-width: 70ch; line-height: 1.6; }
+.rule b { color: var(--fg); font-weight: 500; }
+.grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(190px, 1fr)); gap: 16px; align-items: start; }
+.card { background: var(--card); border: 1px solid var(--line); border-radius: 10px; overflow: hidden; }
+.plate { height: 104px; position: relative; border-bottom: 1px solid var(--line); display: flex; align-items: center; padding: 0 14px; }
+.a .plate { background: var(--plate-a); } .b .plate { background: var(--plate-b); } .c .plate { background: var(--plate-c); }
+.fig { font-family: var(--en); font-weight: 800; font-size: 1.9rem; line-height: 1.1; overflow-wrap: anywhere; }
+.fig.s { font-size: 1.35rem; }
+.tag { position: absolute; left: 12px; top: 8px; font-size: .7rem; font-weight: 700; color: var(--tag); border: 1px solid currentColor; border-radius: 4px; padding: 1px 5px; }
+.body { padding: 12px 14px 14px; display: grid; gap: 3px; }
+.ipa { font-family: var(--en); font-size: 1.05rem; }
+.pos { color: var(--accent); font-size: .85rem; font-style: italic; }
+.zh { font-weight: 700; }
+.ex { font-size: .82rem; color: var(--muted); margin-top: 6px; display: grid; gap: 1px; }
+.ex b { font-family: var(--en); color: var(--fg); font-size: .95rem; font-weight: 600; }
+.btns { display: flex; gap: 6px; margin-top: 10px; }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <h1>Coffee · 咖啡店英语<small>24 个在咖啡店点单、定制、付款时最常用的词和句子，点 ▶ 听发音</small></h1>
+  <div id="sections"></div>
+</div>
+
+<script type="application/json" id="deck">
+[
+ {"id":"a","title":"进店与点单","rule":"点单最常用的句型是 <b>Can I get …?</b> 或 <b>I'd like …</b>，比 I want … 更礼貌。店员常问 <b>For here or to go?</b>（堂食还是外带）。","cards":[
+  {"fig":"order","ipa":"/ˈɔːrdər/","pos":"v. / n.","zh":"点单；点的东西","say":"order","ex":"Are you ready to order?","exZh":"您准备好点单了吗？"},
+  {"fig":"menu","ipa":"/ˈmenjuː/","pos":"n.","zh":"菜单","say":"menu","ex":"Could I see the menu, please?","exZh":"可以看一下菜单吗？"},
+  {"fig":"Can I get …?","ipa":"/kən aɪ ˈɡet/","pos":"phr.","zh":"我可以要……吗？","say":"Can I get","ex":"Can I get a latte, please?","exZh":"我要一杯拿铁，谢谢。","tag":"常用句型"},
+  {"fig":"I'd like …","ipa":"/aɪd ˈlaɪk/","pos":"phr.","zh":"我想要……","say":"I'd like","ex":"I'd like a cappuccino.","exZh":"我想要一杯卡布奇诺。","tag":"常用句型"},
+  {"fig":"for here","ipa":"/fər ˈhɪr/","pos":"phr.","zh":"堂食","say":"for here","ex":"For here or to go?","exZh":"堂食还是外带？"},
+  {"fig":"to go","ipa":"/tə ˈɡoʊ/","pos":"phr.","zh":"外带","say":"to go","ex":"I'll have it to go.","exZh":"我带走。","tag":"英式说 takeaway"},
+  {"fig":"recommend","ipa":"/ˌrekəˈmend/","pos":"v.","zh":"推荐","say":"recommend","ex":"What do you recommend?","exZh":"你推荐什么？"},
+  {"fig":"decaf","ipa":"/ˈdiːkæf/","pos":"adj. / n.","zh":"低因（咖啡）","say":"decaf","ex":"Do you have decaf?","exZh":"有低因咖啡吗？"}
+ ]},
+ {"id":"b","title":"杯型与口味","rule":"美式咖啡店常用 <b>small / medium / large</b>，有的店用 tall / grande / venti。定制时用 <b>with …</b>（加）和 <b>no …</b>（不要）。","cards":[
+  {"fig":"medium","ipa":"/ˈmiːdiəm/","pos":"adj.","zh":"中杯","say":"medium","ex":"A medium iced coffee, please.","exZh":"一杯中杯冰咖啡。"},
+  {"fig":"iced","ipa":"/aɪst/","pos":"adj.","zh":"加冰的","say":"iced","ex":"Can I get that iced?","exZh":"可以做成冰的吗？"},
+  {"fig":"oat milk","ipa":"/ˈoʊt mɪlk/","pos":"n.","zh":"燕麦奶","say":"oat milk","ex":"A latte with oat milk, please.","exZh":"一杯燕麦奶拿铁。"},
+  {"fig":"extra shot","ipa":"/ˈekstrə ʃɑːt/","pos":"n.","zh":"多加一份浓缩","say":"extra shot","ex":"Could you add an extra shot?","exZh":"能多加一份浓缩吗？"},
+  {"fig":"sugar-free","ipa":"/ˈʃʊɡər friː/","pos":"adj.","zh":"无糖的","say":"sugar-free","ex":"Is the vanilla syrup sugar-free?","exZh":"香草糖浆是无糖的吗？"},
+  {"fig":"whipped cream","ipa":"/ˌwɪpt ˈkriːm/","pos":"n.","zh":"奶油顶","say":"whipped cream","ex":"No whipped cream, please.","exZh":"请不要加奶油。"},
+  {"fig":"refill","ipa":"/ˈriːfɪl/","pos":"n.","zh":"续杯","say":"refill","ex":"Are refills free?","exZh":"续杯免费吗？"},
+  {"fig":"pastry","ipa":"/ˈpeɪstri/","pos":"n.","zh":"酥皮点心","say":"pastry","ex":"I'll also take a pastry.","exZh":"我再要一个点心。"}
+ ]},
+ {"id":"c","title":"付款与取餐","rule":"付款时店员会问 <b>Cash or card?</b>；在美国，柜台常有 <b>tip</b>（小费）选项，可以选 No tip。取餐时听店员叫你的名字。","cards":[
+  {"fig":"receipt","ipa":"/rɪˈsiːt/","pos":"n.","zh":"收据","say":"receipt","ex":"Could I have a receipt, please?","exZh":"可以给我收据吗？","tag":"p 不发音"},
+  {"fig":"cash","ipa":"/kæʃ/","pos":"n.","zh":"现金","say":"cash","ex":"Cash or card?","exZh":"现金还是刷卡？"},
+  {"fig":"tap","ipa":"/tæp/","pos":"v.","zh":"（手机、卡）碰一下支付","say":"tap","ex":"You can tap your card here.","exZh":"您可以在这里碰卡支付。"},
+  {"fig":"tip","ipa":"/tɪp/","pos":"n.","zh":"小费","say":"tip","ex":"Would you like to add a tip?","exZh":"要加小费吗？"},
+  {"fig":"change","ipa":"/tʃeɪndʒ/","pos":"n.","zh":"找零","say":"change","ex":"Here's your change.","exZh":"这是找您的零钱。"},
+  {"fig":"pick up","ipa":"/ˌpɪk ˈʌp/","pos":"phr. v.","zh":"取（餐）","say":"pick up","ex":"You can pick it up at the counter.","exZh":"您可以在柜台取餐。"},
+  {"fig":"Name for the order?","ipa":"","pos":"sentence","zh":"点单留个名字？","say":"Name for the order?","ex":"Name for the order? — It's Lin.","exZh":"点单留个名字？——我姓林。"},
+  {"fig":"napkin","ipa":"/ˈnæpkɪn/","pos":"n.","zh":"餐巾纸","say":"napkin","ex":"Where are the napkins?","exZh":"餐巾纸在哪里？"}
+ ]}
+]
+</script>
+
+<script>
+// 发音：没有嵌入录音时用浏览器自带语音；以后可以按日语页面的格式在这里放 {文字: "data:audio/mpeg;base64,..."}
+const AUDIO = {};
+const DECK = JSON.parse(document.getElementById("deck").textContent);
+const esc = s => String(s).replace(/[&<>"]/g, c => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" }[c]));
+const host = document.getElementById("sections");
+DECK.forEach(sec => {
+  const s = document.createElement("section");
+  s.innerHTML = `<h2>${esc(sec.title)}</h2><p class="rule">${sec.rule}</p><div class="grid"></div>`;
+  const grid = s.querySelector(".grid");
+  sec.cards.forEach(c => {
+    const el = document.createElement("article");
+    el.className = "card " + sec.id;
+    el.innerHTML = `
+      <div class="plate">${c.tag ? `<span class="tag">${esc(c.tag)}</span>` : ""}
+        <span class="fig ${c.fig.length > 12 ? "s" : ""}">${esc(c.fig)}</span></div>
+      <div class="body">
+        ${c.ipa ? `<span class="ipa">${esc(c.ipa)}</span>` : ""}
+        <span class="pos">${esc(c.pos || "")}</span>
+        <span class="zh">${esc(c.zh)}</span>
+        <span class="ex"><b>${esc(c.ex)}</b><span>${esc(c.exZh)}</span></span>
+        <div class="btns">
+          <button type="button" data-say="${esc(c.say)}">▶ 单词</button>
+          <button type="button" data-say="${esc(c.ex)}">▶ 例句</button>
+        </div>
+      </div>`;
+    grid.appendChild(el);
+  });
+  host.appendChild(s);
+});
+host.addEventListener("click", e => {
+  const b = e.target.closest("button[data-say]");
+  if (!b) return;
+  const text = b.dataset.say;
+  if (AUDIO[text]) { new Audio(AUDIO[text]).play(); return; }
+  if (!window.speechSynthesis) return;
+  speechSynthesis.cancel();
+  const u = new SpeechSynthesisUtterance(text);
+  u.lang = "en-US"; u.rate = 0.9;
+  speechSynthesis.speak(u);
+});
+</script>
+</body>
+</html>
