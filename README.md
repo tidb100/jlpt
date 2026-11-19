@@ -9,23 +9,25 @@ jlpt/
 ├── index.html              # 支持手机阅读的资源导航主页
 ├── README.md
 └── word/
-    ├── 五十音记忆表.html
-    ├── 东京寿司店日语.html
-    ├── 日语数字与金额.html
-    ├── 日语日期与时间.html
-    └── 日语颜色十词.html
+    ├── ja-gojuon.html       # 五十音记忆表
+    ├── ja-sushi.html        # 东京寿司店日语
+    ├── ja-numbers.html      # 日语数字与金额
+    ├── ja-date.html         # 日语日期与时间
+    ├── ja-color.html        # 日语颜色十词
+    └── en-cafe.html         # 咖啡店英语（拓展学习）
 ```
 
-五个学习页面存放于 `word/`。更新学习资料时，将 HTML 上传至此目录并覆盖同名文件，再同步更新导航主页和本说明。主页使用相对链接，适用于项目站点和本地打开。
+六个学习页面存放于 `word/`，其中五个为日语主题，一个为咖啡店英语拓展主题。文件复制自 [tidb100/mojifree 的 sources 目录](https://github.com/tidb100/mojifree/tree/main/sources)，保留原文件名和内容。更新学习资料时，先检查同名文件内容，再同步更新导航主页和本说明。主页使用相对链接，适用于项目站点和本地打开。
 
 ## GitHub Pages 访问地址
 
 - 项目主页：https://tidb100.github.io/jlpt/
-- [五十音记忆表](https://tidb100.github.io/jlpt/word/五十音记忆表.html)
-- [东京寿司店日语](https://tidb100.github.io/jlpt/word/东京寿司店日语.html)
-- [日语数字与金额](https://tidb100.github.io/jlpt/word/日语数字与金额.html)
-- [日语日期与时间](https://tidb100.github.io/jlpt/word/日语日期与时间.html)
-- [日语颜色十词](https://tidb100.github.io/jlpt/word/日语颜色十词.html)
+- [五十音记忆表](https://tidb100.github.io/jlpt/word/ja-gojuon.html)
+- [东京寿司店日语](https://tidb100.github.io/jlpt/word/ja-sushi.html)
+- [日语数字与金额](https://tidb100.github.io/jlpt/word/ja-numbers.html)
+- [日语日期与时间](https://tidb100.github.io/jlpt/word/ja-date.html)
+- [日语颜色十词](https://tidb100.github.io/jlpt/word/ja-color.html)
+- [咖啡店英语（拓展学习）](https://tidb100.github.io/jlpt/word/en-cafe.html)
 
 `https://tidb100.github.io/` 是账号根站点，通常由 `tidb100.github.io` 仓库提供；本仓库 `jlpt` 对应 `/jlpt/` 项目路径。GitHub 仓库中的文件预览地址显示源代码，在线阅读请使用上面的 Pages 地址。
 
