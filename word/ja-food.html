@@ -1,0 +1,2912 @@
+<!doctype html><html><head><meta charset=utf8><meta name=viewport content="width=device-width,initial-scale=1,viewport-fit=cover"><style>:root{color-scheme:light;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}html{scroll-padding-top:env(safe-area-inset-top,0px)}body{margin:0;padding:0;font:14px -apple-system,BlinkMacSystemFont,sans-serif;background:#fff;color:#000}img{max-width:100%}[hidden]:not([hidden=until-found i]){display:none!important}</style></head><body>
+<title>日本餐饮场景日语 · 100词</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Zen+Maru+Gothic:wght@500;700;900&family=Noto+Sans+SC:wght@400;500;700&display=swap">
+<style>
+/* Six food-and-dining sections, using the same card layout and controls as ja-sushi.html. */
+:root {
+  --bg: #f6f5f2;
+  --card: #ffffff;
+  --fg: #22211f;
+  --muted: #6d6a64;
+  --line: #e2dfd8;
+  --accent: #1e50a2;
+  --plate-a: #e8eef9;  /* 进店与点餐 */
+  --plate-b: #fbe6e1;  /* 寿司料：鱼生的粉红 */
+  --plate-c: #e7f2ea;  /* 调味：わさび绿 */
+  --plate-d: #f4ecdc; --plate-e: #f1eaf8; --plate-f: #e7f2f1;
+  --tag: #b3401f;
+  --jp: "Zen Maru Gothic", "Hiragino Maru Gothic ProN", "Yu Gothic", sans-serif;
+  --zh: "Noto Sans SC", "PingFang SC", "Microsoft YaHei", sans-serif;
+}
+@media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) {
+  --bg: #171716; --card: #222120; --fg: #efede8; --muted: #a29e96; --line: #36342f; --accent: #8fb0ea;
+  --plate-a: #1f2a3d; --plate-b: #3d2522; --plate-c: #1f3326; --plate-d: #382f22; --plate-e: #32263d; --plate-f: #1d3634; --tag: #f0936f; color-scheme: dark } }
+:root[data-theme="dark"] {
+  --bg: #171716; --card: #222120; --fg: #efede8; --muted: #a29e96; --line: #36342f; --accent: #8fb0ea;
+  --plate-a: #1f2a3d; --plate-b: #3d2522; --plate-c: #1f3326; --plate-d: #382f22; --plate-e: #32263d; --plate-f: #1d3634; --tag: #f0936f; color-scheme: dark }
+
+[hidden] { display: none !important; }
+body { background: var(--bg); color: var(--fg); font-family: var(--zh); }
+.wrap { max-width: 1040px; margin: 0 auto; padding-block: 32px 48px;
+  padding-left: max(16px, env(safe-area-inset-left, 0px)); padding-right: max(16px, env(safe-area-inset-right, 0px)); }
+header { display: flex; flex-wrap: wrap; align-items: end; justify-content: space-between; gap: 16px; margin-bottom: 12px; }
+h1 { font-family: var(--jp); font-weight: 900; font-size: 2rem; margin: 0; text-wrap: balance; }
+h1 small { display: block; font-family: var(--zh); font-weight: 500; font-size: .95rem; color: var(--muted); margin-top: 4px; }
+.tools { display: flex; flex-wrap: wrap; gap: 8px; align-items: center; }
+button { font: inherit; cursor: pointer; border-radius: 999px; border: 1px solid var(--line); background: var(--card); color: var(--fg); padding: 8px 14px; }
+button:hover { border-color: var(--accent); }
+button:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+button[aria-pressed="true"] { background: var(--accent); color: var(--bg); border-color: var(--accent); }
+.note { font-size: .85rem; color: var(--muted); margin: 0 0 8px; }
+.note[data-warn] { color: var(--tag); }
+
+section { margin-top: 28px; }
+h2 { font-family: var(--jp); font-weight: 900; font-size: 1.3rem; margin: 0 0 4px; }
+.rule { font-size: .88rem; color: var(--muted); margin: 0 0 14px; max-width: 70ch; line-height: 1.6; }
+.rule b { color: var(--fg); font-weight: 500; }
+
+.grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(190px, 1fr)); gap: 16px; align-items: start; }
+.card { background: var(--card); border: 1px solid var(--line); border-radius: 10px; overflow: hidden; display: flex; flex-direction: column; }
+.card.playing { border-color: var(--accent); box-shadow: 0 0 0 2px var(--accent); }
+.plate { height: 104px; position: relative; border-bottom: 1px solid var(--line); display: flex; align-items: center; padding: 0 14px; }
+.a .plate { background: var(--plate-a); } .b .plate { background: var(--plate-b); } .c .plate { background: var(--plate-c); } .d .plate { background: var(--plate-d); } .e .plate { background: var(--plate-e); } .f .plate { background: var(--plate-f); }
+.fig { font-family: var(--jp); font-weight: 900; font-size: 2.6rem; font-variant-numeric: tabular-nums; letter-spacing: -.01em; line-height: 1; }
+.fig.m { font-size: 1.9rem; } .fig.s { font-size: 1.35rem; line-height: 1.3; text-wrap: balance; padding-top: 14px; }
+
+.kj { position: absolute; right: 12px; top: 8px; font-family: var(--jp); font-weight: 700; font-size: 1rem; color: var(--muted); }
+.tag { position: absolute; left: 12px; top: 8px; font-size: .7rem; font-weight: 700; letter-spacing: .06em; color: var(--tag); border: 1px solid currentColor; border-radius: 4px; padding: 1px 5px; }
+.body { padding: 12px 14px 14px; display: grid; gap: 3px; align-content: start; flex: 1; }
+.kana { font-family: var(--jp); font-weight: 700; font-size: 1.25rem; overflow-wrap: anywhere; }
+.romaji { color: var(--accent); font-size: .9rem; letter-spacing: .03em; }
+.zh { font-weight: 700; }
+.ex { font-size: .82rem; color: var(--muted); margin-top: 6px; display: grid; gap: 1px; }
+.ex b { font-family: var(--jp); font-weight: 700; color: var(--fg); font-size: .92rem; }
+.ex .exkana { font-family: var(--jp); overflow-wrap: anywhere; }
+.ex .exro { color: var(--accent); letter-spacing: .03em; }
+.exline { display: flex; align-items: baseline; gap: 6px; }
+.why { flex: none; width: 1.35em; height: 1.35em; padding: 0; border-radius: 50%; font-size: .78rem; font-weight: 700; line-height: 1; color: var(--accent); border-color: var(--accent); background: transparent; align-self: center; }
+.why[aria-expanded="true"] { background: var(--accent); color: var(--bg); }
+.an { margin-top: 8px; padding: 10px 12px; border-radius: 8px; background: var(--bg); border: 1px solid var(--line); display: grid; gap: 8px; font-size: .82rem; }
+.an-h { font-size: .7rem; letter-spacing: .1em; color: var(--muted); }
+.an-parts { display: flex; flex-wrap: wrap; gap: 6px; }
+.part { display: grid; gap: 1px; padding: 5px 8px; border-radius: 6px; background: var(--card); border: 1px solid var(--line); min-width: 0; }
+.part b { font-family: var(--jp); font-weight: 700; font-size: .92rem; }
+.part .r { color: var(--accent); font-size: .74rem; letter-spacing: .02em; }
+.part .m { color: var(--muted); font-size: .74rem; }
+.an-note { margin: 0; line-height: 1.6; }
+.an-note b { font-weight: 700; }
+.btns { display: flex; gap: 6px; margin-top: 10px; }
+.btns button { padding: 6px 12px; font-size: .85rem; }
+
+/* 遮住读音：练习时隐藏假名和罗马音，点卡片显示 */
+.quiz .card:not(.shown) :is(.kana, .romaji, .exkana, .exro, .part .r) { color: transparent; background: var(--line); border-radius: 4px; }
+.quiz .card:not(.shown) { cursor: pointer; }
+@media (prefers-reduced-motion: no-preference) { .card { transition: box-shadow .15s, border-color .15s; } }
+</style>
+
+<div class="wrap" id="app">
+  <header>
+    <h1>たべもの · 日本餐饮日语<small>100 个高频词 · 6 大场景，点 ▶ 听发音</small></h1>
+    <div class="tools">
+      <button id="playAll" type="button">▶ 全部播放</button>
+      <button id="loop" type="button" aria-pressed="false" title="最长循环 30 分钟，到时自动停止">循环播放 · 30分钟</button>
+      <button id="slow" type="button" aria-pressed="false">慢速</button>
+      <button id="quiz" type="button" aria-pressed="false">遮住读音</button>
+    </div>
+  </header>
+  <p class="note" id="note">发音：浏览器日语语音（本词库未嵌入录音）。</p>
+  <div id="sections"></div>
+</div>
+
+<script type="application/json" id="deck">
+[
+  {
+    "id": "a",
+    "title": "通用（进店与结账）",
+    "rule": "进店先听懂 \u003cb\u003e何名様ですか\u003c/b\u003e（几位），结账常说 \u003cb\u003eお会計お願いします\u003c/b\u003e。例句里「店員：」是店员的话，「——」后面是客人回答。",
+    "cards": [
+      {
+        "fig": "いらっしゃいませ",
+        "kana": "いらっしゃいませ",
+        "zh": "欢迎光临（店员招呼语，点头即可，不必回应）",
+        "ex": "店員：いらっしゃいませ、こちらへどうぞ。",
+        "exZh": "店员：欢迎光临，这边请。",
+        "ro": "irasshaimase",
+        "exKana": "てんいん：いらっしゃいませ、こちらへどうぞ。",
+        "exRo": "ten'in: irasshaimase, kochirahedouzo.",
+        "say": "いらっしゃいませ",
+        "kj": "",
+        "an": {
+          "p": [
+            [
+              "いらっしゃいませ",
+              "irasshaimase",
+              "欢迎光临"
+            ]
+          ],
+          "n": "「店員：」表示店员说的话；「——」后是客人的回答（如有）。先练习听懂提问，再练习回答。"
+        }
+      },
+      {
+        "fig": "何名様",
+        "kana": "なんめいさま",
+        "zh": "几位（店员询问人数）",
+        "ex": "店員：何名様ですか。——二人です。",
+        "exZh": "店员：请问几位？——两位。",
+        "ro": "nanmeisama",
+        "exKana": "てんいん：なんめいさまですか。——ふたりです。",
+        "exRo": "ten'in: nanmeisamadesuka. ——futaridesu.",
+        "say": "なんめいさま",
+        "kj": "",
+        "an": {
+          "p": [
+            [
+              "何名様",
+              "nanmeisama",
+              "几位"
+            ],
+            [
+              "ですか",
+              "desu ka",
+              "……吗？"
+            ]
+          ],
+          "n": "「店員：」表示店员说的话；「——」后是客人的回答（如有）。先练习听懂提问，再练习回答。"
+        }
+      },
+      {
+        "fig": "予約",
+        "kana": "よやく",
+        "zh": "预约",
+        "ex": "予約していないんですが、入れますか。",
+        "exZh": "我没有预约，可以进去吗？",
+        "ro": "yoyaku",
+        "exKana": "よやくしていないんですが、はいれますか。",
+        "exRo": "yoyakushiteinaindesuga, hairemasuka.",
+        "say": "よやく",
+        "kj": "",
+        "an": {
+          "p": [
+            [
+              "予約",
+              "yoyaku",
+              "预约"
+            ],
+            [
+              "で",
+              "de",
+              "用……方式／按……"
+            ]
+          ],
+          "n": "结合店内实际场景记住这句话，下次可以直接替换菜名或数量使用。"
+        }
+      },
+      {
+        "fig": "待ち",
+        "kana": "まち",
+        "zh": "等候时间、排队",
+        "ex": "今、何分待ちですか。",
+        "exZh": "现在要等多少分钟？",
+        "ro": "machi",
+        "exKana": "いま、なんぷんまちですか。",
+        "exRo": "ima, nanpunmachidesuka.",
+        "say": "まち",
+        "kj": "",
+        "an": {
+          "p": [
+            [
+              "待ち",
+              "machi",
+              "等候时间"
+            ],
+            [
+              "ですか",
+              "desu ka",
+              "……吗？"
+            ]
+          ],
+          "n": "句末「ですか」表示礼貌疑问，可直接用于向店员询问。"
+        }
+      },
+      {
+        "fig": "すみません",
+        "kana": "すみません",
+        "zh": "不好意思（叫店员时用）",
+        "ex": "すみません、注文いいですか。",
+        "exZh": "不好意思，可以点餐吗？",
+        "ro": "sumimasen",
+        "exKana": "すみません、ちゅうもんいいですか。",
+        "exRo": "sumimasen, chuumon'iidesuka.",
+        "say": "すみません",
+        "kj": "",
+        "an": {
+          "p": [
+            [
+              "すみません",
+              "sumimasen",
+              "不好意思"
+            ],
+            [
+              "ですか",
+              "desu ka",
+              "……吗？"
+            ]
+          ],
+          "n": "句末「ですか」表示礼貌疑问，可直接用于向店员询问。"
+        }
+      },
+      {
+        "fig": "メニュー",
+        "kana": "メニュー",
+        "zh": "菜单",
+        "ex": "中国語のメニューはありますか。",
+        "exZh": "有中文菜单吗？",
+        "ro": "menyū",
+        "exKana": "ちゅうごくごのメニューはありますか。",
+        "exRo": "chuugokugonomenyūhaarimasuka.",
+        "say": "メニュー",
+        "kj": "",
+        "an": {
+          "p": [
+            [
+              "メニュー",
+              "menyū",
+              "菜单"
+            ]
+          ],
+          "n": "结合店内实际场景记住这句话，下次可以直接替换菜名或数量使用。"
+        }
+      },
+      {
+        "fig": "注文",
+        "kana": "ちゅうもん",
+        "zh": "点餐",
+        "ex": "店員：ご注文はお決まりですか。",
+        "exZh": "店员：您决定好点什么了吗？",
+        "ro": "chuumon",
+        "exKana": "てんいん：ごちゅうもんはおきまりですか。",
+        "exRo": "ten'in: gochuumonhaokimaridesuka.",
+        "say": "ちゅうもん",
+        "kj": "",
+        "an": {
+          "p": [
+            [
+              "注文",
+              "chuumon",
+              "点餐"
+            ],
+            [
+              "ですか",
+              "desu ka",
+              "……吗？"
+            ]
+          ],
+          "n": "「店員：」表示店员说的话；「——」后是客人的回答（如有）。先练习听懂提问，再练习回答。"
+        }
+      },
+      {
+        "fig": "タッチパネル",
+        "kana": "タッチパネル",
+        "zh": "触屏点餐平板",
+        "ex": "店員：ご注文はタッチパネルからお願いします。",
+        "exZh": "店员：请用桌上的平板点餐。",
+        "ro": "tatchipaneru",
+        "exKana": "てんいん：ごちゅうもんはタッチパネルからおねがいします。",
+        "exRo": "ten'in: gochuumonhatatchipanerukaraonegaishimasu.",
+        "say": "タッチパネル",
+        "kj": "",
+        "an": {
+          "p": [
+            [
+              "タッチパネル",
+              "tatchipaneru",
+              "触屏点餐平板"
+            ],
+            [
+              "お願いします",
+              "onegai shimasu",
+              "请、麻烦"
+            ]
+          ],
+          "n": "「店員：」表示店员说的话；「——」后是客人的回答（如有）。先练习听懂提问，再练习回答。"
+        }
+      },
+      {
+        "fig": "お冷",
+        "kana": "おひや",
+        "zh": "冰水（店里免费提供的饮用水）",
+        "ex": "お冷をもう一杯ください。",
+        "exZh": "请再来一杯冰水。",
+        "ro": "ohiya",
+        "exKana": "おひやをもういっぱいください。",
+        "exRo": "ohiyaomouippaikudasai.",
+        "say": "おひや",
+        "kj": "",
+        "an": {
+          "p": [
+            [
+              "お冷",
+              "ohiya",
+              "冰水"
+            ],
+            [
+              "ください",
+              "kudasai",
+              "请给我／请"
+            ]
+          ],
+          "n": "「〜ください」表示请求对方给某物或做某事。"
+        }
+      },
+      {
+        "fig": "おしぼり",
+        "kana": "おしぼり",
+        "zh": "湿毛巾",
+        "ex": "おしぼりをもう一つもらえますか。",
+        "exZh": "能再给我一条湿毛巾吗？",
+        "ro": "oshibori",
+        "exKana": "おしぼりをもうひとつもらえますか。",
+        "exRo": "oshiboriomouhitotsumoraemasuka.",
+        "say": "おしぼり",
+        "kj": "",
+        "an": {
+          "p": [
+            [
+              "おしぼり",
+              "oshibori",
+              "湿毛巾"
+            ],
+            [
+              "一つ",
+              "hitotsu",
+              "一个"
+            ]
+          ],
+          "n": "「〜できますか／もらえますか」用于礼貌询问是否可以办理或提供。"
+        }
+      },
+      {
+        "fig": "取り皿",
+        "kana": "とりざら",
+        "zh": "分餐小碟",
+        "ex": "取り皿を三枚お願いします。",
+        "exZh": "请给我三个小碟子。",
+        "ro": "torizara",
+        "exKana": "とりざらをさんまいおねがいします。",
+        "exRo": "torizaraosanmaionegaishimasu.",
+        "say": "とりざら",
+        "kj": "",
+        "an": {
+          "p": [
+            [
+              "取り皿",
+              "torizara",
+              "分餐小碟"
+            ],
+            [
+              "お願いします",
+              "onegai shimasu",
+              "请、麻烦"
+            ]
+          ],
+          "n": "「〜お願いします」是点餐、付款或提出需求时常用的礼貌说法。"
+        }
+      },
+      {
+        "fig": "お手洗い",
+        "kana": "おてあらい",
+        "zh": "洗手间",
+        "ex": "お手洗いはどこですか。",
+        "exZh": "洗手间在哪里？",
+        "ro": "otearai",
+        "exKana": "おてあらいはどこですか。",
+        "exRo": "otearaihadokodesuka.",
+        "say": "おてあらい",
+        "kj": "",
+        "an": {
+          "p": [
+            [
+              "お手洗い",
+              "otearai",
+              "洗手间"
+            ],
+            [
+              "ですか",
+              "desu ka",
+              "……吗？"
+            ]
+          ],
+          "n": "句末「ですか」表示礼貌疑问，可直接用于向店员询问。"
+        }
+      },
+      {
+        "fig": "アレルギー",
+        "kana": "アレルギー",
+        "zh": "过敏",
+        "ex": "私はアレルギーはありませんが、彼は鶏肉アレルギーです。",
+        "exZh": "我没有过敏的食物，他对鸡肉过敏。",
+        "ro": "arerugī",
+        "exKana": "わたしはアレルギーはありませんが、かれはとりにくアレルギーです。",
+        "exRo": "watashihaarerugīhaarimasenga, karehatorinikuarerugīdesu.",
+        "say": "アレルギー",
+        "kj": "",
+        "an": {
+          "p": [
+            [
+              "アレルギー",
+              "arerugī",
+              "过敏"
+            ],
+            [
+              "で",
+              "de",
+              "用……方式／按……"
+            ]
+          ],
+          "n": "结合店内实际场景记住这句话，下次可以直接替换菜名或数量使用。"
+        }
+      },
+      {
+        "fig": "抜き",
+        "kana": "ぬき",
+        "zh": "去掉、不要放（接在食材后面）",
+        "ex": "わさび抜きでお願いします。",
+        "exZh": "请不要放芥末。",
+        "ro": "nuki",
+        "exKana": "わさびぬきでおねがいします。",
+        "exRo": "wasabinukideonegaishimasu.",
+        "say": "ぬき",
+        "kj": "",
+        "an": {
+          "p": [
+            [
+              "抜き",
+              "nuki",
+              "去掉"
+            ],
+            [
+              "お願いします",
+              "onegai shimasu",
+              "请、麻烦"
+            ]
+          ],
+          "n": "「〜お願いします」是点餐、付款或提出需求时常用的礼貌说法。"
+        }
+      },
+      {
+        "fig": "大丈夫です",
+        "kana": "だいじょうぶです",
+        "zh": "不用了（婉拒；比「結構です」更不容易被误会）",
+        "ex": "大丈夫です、自分でやります。",
+        "exZh": "不用了，我自己来。",
+        "ro": "daijoubudesu",
+        "exKana": "だいじょうぶです、じぶんでやります。",
+        "exRo": "daijoubudesu, jibundeyarimasu.",
+        "say": "だいじょうぶです",
+        "kj": "",
+        "an": {
+          "p": [
+            [
+              "大丈夫です",
+              "daijoubudesu",
+              "不用了"
+            ],
+            [
+              "で",
+              "de",
+              "用……方式／按……"
+            ]
+          ],
+          "n": "结合店内实际场景记住这句话，下次可以直接替换菜名或数量使用。"
+        }
+      },
+      {
+        "fig": "会計",
+        "kana": "かいけい",
+        "zh": "结账",
+        "ex": "すみません、お会計お願いします。",
+        "exZh": "不好意思，麻烦结账。",
+        "ro": "kaikei",
+        "exKana": "すみません、おかいけいおねがいします。",
+        "exRo": "sumimasen, okaikeionegaishimasu.",
+        "say": "かいけい",
+        "kj": "",
+        "an": {
+          "p": [
+            [
+              "会計",
+              "kaikei",
+              "结账"
+            ],
+            [
+              "お願いします",
+              "onegai shimasu",
+              "请、麻烦"
+            ]
+          ],
+          "n": "「〜お願いします」是点餐、付款或提出需求时常用的礼貌说法。"
+        }
+      },
+      {
+        "fig": "別々",
+        "kana": "べつべつ",
+        "zh": "分开付",
+        "ex": "店員：お会計はご一緒ですか。——別々でお願いします。",
+        "exZh": "店员：一起结账吗？——请分开结。",
+        "ro": "betsubetsu",
+        "exKana": "てんいん：おかいけいはごいっしょですか。——べつべつでおねがいします。",
+        "exRo": "ten'in: okaikeihagoisshodesuka. ——betsubetsudeonegaishimasu.",
+        "say": "べつべつ",
+        "kj": "",
+        "an": {
+          "p": [
+            [
+              "別々",
+              "betsubetsu",
+              "分开付"
+            ],
+            [
+              "お願いします",
+              "onegai shimasu",
+              "请、麻烦"
+            ]
+          ],
+          "n": "「店員：」表示店员说的话；「——」后是客人的回答（如有）。先练习听懂提问，再练习回答。"
+        }
+      },
+      {
+        "fig": "カード",
+        "kana": "カード",
+        "zh": "信用卡、银行卡（扫码支付说「QRコード決済」）",
+        "ex": "カードで払えますか。",
+        "exZh": "可以刷卡吗？",
+        "ro": "kādo",
+        "exKana": "カードではらえますか。",
+        "exRo": "kādodeharaemasuka.",
+        "say": "カード",
+        "kj": "",
+        "an": {
+          "p": [
+            [
+              "カード",
+              "kādo",
+              "信用卡"
+            ],
+            [
+              "で",
+              "de",
+              "用……方式／按……"
+            ]
+          ],
+          "n": "结合店内实际场景记住这句话，下次可以直接替换菜名或数量使用。"
+        }
+      },
+      {
+        "fig": "現金",
+        "kana": "げんきん",
+        "zh": "现金",
+        "ex": "店員：申し訳ありません、現金のみとなっております。",
+        "exZh": "店员：抱歉，本店只收现金。",
+        "ro": "genkin",
+        "exKana": "てんいん：もうしわけありません、げんきんのみとなっております。",
+        "exRo": "ten'in: moushiwakearimasen, genkinnomitonatteorimasu.",
+        "say": "げんきん",
+        "kj": "",
+        "an": {
+          "p": [
+            [
+              "現金",
+              "genkin",
+              "现金"
+            ]
+          ],
+          "n": "「店員：」表示店员说的话；「——」后是客人的回答（如有）。先练习听懂提问，再练习回答。"
+        }
+      },
+      {
+        "fig": "レシート",
+        "kana": "レシート",
+        "zh": "小票（需要正式收据时说「領収書」）",
+        "ex": "店員：レシートはご入用ですか。——はい、お願いします。",
+        "exZh": "店员：需要小票吗？——要，谢谢。",
+        "ro": "reshīto",
+        "exKana": "てんいん：レシートはごいりようですか。——はい、おねがいします。",
+        "exRo": "ten'in: reshītohagoiriyoudesuka. ——hai, onegaishimasu.",
+        "say": "レシート",
+        "kj": "",
+        "an": {
+          "p": [
+            [
+              "レシート",
+              "reshīto",
+              "小票"
+            ],
+            [
+              "お願いします",
+              "onegai shimasu",
+              "请、麻烦"
+            ]
+          ],
+          "n": "「店員：」表示店员说的话；「——」后是客人的回答（如有）。先练习听懂提问，再练习回答。"
+        }
+      }
+    ]
+  },
+  {
+    "id": "b",
+    "title": "烤肉店（焼肉屋）",
+    "rule": "烤肉常见部位：\u003cb\u003eカルビ\u003c/b\u003e（牛五花）、\u003cb\u003eロース\u003c/b\u003e（背部瘦肉）、\u003cb\u003eハラミ\u003c/b\u003e（横膈膜）。鸡肉、猪肉和内脏务必充分烤熟；生肉夹与熟食餐具分开使用。",
+    "cards": [
+      {
+        "fig": "カルビ",
+        "kana": "カルビ",
+        "zh": "牛五花（肋腹肉，油花多）",
+        "ex": "カルビを二人前ください。",
+        "exZh": "请来两人份牛五花。",
+        "ro": "karubi",
+        "exKana": "カルビをににんまえください。",
+        "exRo": "karubionininmaekudasai.",
+        "say": "カルビ",
+        "kj": "",
+        "an": {
+          "p": [
+            [
+              "カルビ",
+              "karubi",
+              "牛五花"
+            ],
+            [
+              "ください",
+              "kudasai",
+              "请给我／请"
+            ]
+          ],
+          "n": "「〜ください」表示请求对方给某物或做某事。"
+        }
+      },
+      {
+        "fig": "ロース",
+        "kana": "ロース",
+        "zh": "牛背部瘦肉（肩里脊、上脑等，比カルビ清爽）",
+        "ex": "ロースは脂が少ないですか。",
+        "exZh": "里脊肉油脂比较少吗？",
+        "ro": "rōsu",
+        "exKana": "ロースはあぶらがすくないですか。",
+        "exRo": "rōsuhaaburagasukunaidesuka.",
+        "say": "ロース",
+        "kj": "",
+        "an": {
+          "p": [
+            [
+              "ロース",
+              "rōsu",
+              "牛背部瘦肉"
+            ],
+            [
+              "ですか",
+              "desu ka",
+              "……吗？"
+            ]
+          ],
+          "n": "句末「ですか」表示礼貌疑问，可直接用于向店员询问。"
+        }
+      },
+      {
+        "fig": "ハラミ",
+        "kana": "ハラミ",
+        "zh": "横膈膜肉（口感嫩，性价比高）",
+        "ex": "ハラミを一人前追加でお願いします。",
+        "exZh": "请再加一人份横膈膜肉。",
+        "ro": "harami",
+        "exKana": "ハラミをいちにんまえついかでおねがいします。",
+        "exRo": "haramioichininmaetsuikadeonegaishimasu.",
+        "say": "ハラミ",
+        "kj": "",
+        "an": {
+          "p": [
+            [
+              "ハラミ",
+              "harami",
+              "横膈膜肉"
+            ],
+            [
+              "お願いします",
+              "onegai shimasu",
+              "请、麻烦"
+            ]
+          ],
+          "n": "「〜お願いします」是点餐、付款或提出需求时常用的礼貌说法。"
+        }
+      },
+      {
+        "fig": "タン塩",
+        "kana": "タンしお",
+        "zh": "盐味牛舌（通常第一盘点）",
+        "ex": "まずはタン塩からお願いします。",
+        "exZh": "先来一份盐味牛舌。",
+        "ro": "tanshio",
+        "exKana": "まずはタンしおからおねがいします。",
+        "exRo": "mazuhatanshiokaraonegaishimasu.",
+        "say": "タンしお",
+        "kj": "",
+        "an": {
+          "p": [
+            [
+              "タン塩",
+              "tanshio",
+              "盐味牛舌"
+            ],
+            [
+              "お願いします",
+              "onegai shimasu",
+              "请、麻烦"
+            ]
+          ],
+          "n": "「〜お願いします」是点餐、付款或提出需求时常用的礼貌说法。"
+        }
+      },
+      {
+        "fig": "ホルモン",
+        "kana": "ホルモン",
+        "zh": "牛、猪内脏",
+        "ex": "ホルモンはどれがおすすめですか。",
+        "exZh": "内脏类推荐哪种？",
+        "ro": "horumon",
+        "exKana": "ホルモンはどれがおすすめですか。",
+        "exRo": "horumonhadoregaosusumedesuka.",
+        "say": "ホルモン",
+        "kj": "",
+        "an": {
+          "p": [
+            [
+              "ホルモン",
+              "horumon",
+              "牛"
+            ],
+            [
+              "ですか",
+              "desu ka",
+              "……吗？"
+            ]
+          ],
+          "n": "句末「ですか」表示礼貌疑问，可直接用于向店员询问。"
+        }
+      },
+      {
+        "fig": "特上",
+        "kana": "とくじょう",
+        "zh": "特级（肉的档次：特上＞上＞普通）",
+        "ex": "特上と上は何が違いますか。",
+        "exZh": "特级和上等有什么区别？",
+        "ro": "tokujou",
+        "exKana": "とくじょうとじょうはなにがちがいますか。",
+        "exRo": "tokujoutojouhananigachigaimasuka.",
+        "say": "とくじょう",
+        "kj": "",
+        "an": {
+          "p": [
+            [
+              "特上",
+              "tokujou",
+              "特级"
+            ]
+          ],
+          "n": "结合店内实际场景记住这句话，下次可以直接替换菜名或数量使用。"
+        }
+      },
+      {
+        "fig": "盛り合わせ",
+        "kana": "もりあわせ",
+        "zh": "拼盘",
+        "ex": "盛り合わせは何人前ですか。",
+        "exZh": "这个拼盘是几人份的？",
+        "ro": "moriawase",
+        "exKana": "もりあわせはなんにんまえですか。",
+        "exRo": "moriawasehananninmaedesuka.",
+        "say": "もりあわせ",
+        "kj": "",
+        "an": {
+          "p": [
+            [
+              "盛り合わせ",
+              "moriawase",
+              "拼盘"
+            ],
+            [
+              "ですか",
+              "desu ka",
+              "……吗？"
+            ]
+          ],
+          "n": "句末「ですか」表示礼貌疑问，可直接用于向店员询问。"
+        }
+      },
+      {
+        "fig": "人前",
+        "kana": "にんまえ",
+        "zh": "……人份",
+        "ex": "三人ですが、何人前くらい頼めばいいですか。",
+        "exZh": "我们三个人，大概点几人份合适？",
+        "ro": "ninmae",
+        "exKana": "さんにんですが、なんにんまえくらいたのめばいいですか。",
+        "exRo": "sannindesuga, nanninmaekuraitanomebaiidesuka.",
+        "say": "にんまえ",
+        "kj": "",
+        "an": {
+          "p": [
+            [
+              "人前",
+              "ninmae",
+              "……人份"
+            ],
+            [
+              "ですか",
+              "desu ka",
+              "……吗？"
+            ]
+          ],
+          "n": "句末「ですか」表示礼貌疑问，可直接用于向店员询问。"
+        }
+      },
+      {
+        "fig": "タレ",
+        "kana": "タレ",
+        "zh": "蘸酱",
+        "ex": "タレをもう少しもらえますか。",
+        "exZh": "能再给我一点蘸酱吗？",
+        "ro": "tare",
+        "exKana": "タレをもうすこしもらえますか。",
+        "exRo": "tareomousukoshimoraemasuka.",
+        "say": "タレ",
+        "kj": "",
+        "an": {
+          "p": [
+            [
+              "タレ",
+              "tare",
+              "蘸酱"
+            ],
+            [
+              "もう",
+              "mō",
+              "再、还"
+            ]
+          ],
+          "n": "「〜できますか／もらえますか」用于礼貌询问是否可以办理或提供。"
+        }
+      },
+      {
+        "fig": "ライス",
+        "kana": "ライス",
+        "zh": "米饭（烤肉店菜单常写作「ライス」）",
+        "ex": "ライスの小を一つください。",
+        "exZh": "请来一份小碗米饭。",
+        "ro": "raisu",
+        "exKana": "ライスのしょうをひとつください。",
+        "exRo": "raisunoshouohitotsukudasai.",
+        "say": "ライス",
+        "kj": "",
+        "an": {
+          "p": [
+            [
+              "ライス",
+              "raisu",
+              "米饭"
+            ],
+            [
+              "ください",
+              "kudasai",
+              "请给我／请"
+            ]
+          ],
+          "n": "「〜ください」表示请求对方给某物或做某事。"
+        }
+      },
+      {
+        "fig": "サンチュ",
+        "kana": "サンチュ",
+        "zh": "包肉用的生菜",
+        "ex": "サンチュを追加できますか。",
+        "exZh": "可以加点包肉生菜吗？",
+        "ro": "sanchu",
+        "exKana": "サンチュをついかできますか。",
+        "exRo": "sanchuotsuikadekimasuka.",
+        "say": "サンチュ",
+        "kj": "",
+        "an": {
+          "p": [
+            [
+              "サンチュ",
+              "sanchu",
+              "包肉用的生菜"
+            ],
+            [
+              "できますか",
+              "dekimasu ka",
+              "可以……吗？"
+            ]
+          ],
+          "n": "「〜できますか／もらえますか」用于礼貌询问是否可以办理或提供。"
+        }
+      },
+      {
+        "fig": "ナムル",
+        "kana": "ナムル",
+        "zh": "韩式凉拌菜",
+        "ex": "ナムルの盛り合わせを一つください。",
+        "exZh": "来一份凉拌菜拼盘。",
+        "ro": "namuru",
+        "exKana": "ナムルのもりあわせをひとつください。",
+        "exRo": "namurunomoriawaseohitotsukudasai.",
+        "say": "ナムル",
+        "kj": "",
+        "an": {
+          "p": [
+            [
+              "ナムル",
+              "namuru",
+              "韩式凉拌菜"
+            ],
+            [
+              "ください",
+              "kudasai",
+              "请给我／请"
+            ]
+          ],
+          "n": "「〜ください」表示请求对方给某物或做某事。"
+        }
+      },
+      {
+        "fig": "網",
+        "kana": "あみ",
+        "zh": "烤网",
+        "ex": "網を交換してもらえますか。",
+        "exZh": "能帮我换一下烤网吗？",
+        "ro": "ami",
+        "exKana": "あみをこうかんしてもらえますか。",
+        "exRo": "amiokoukanshitemoraemasuka.",
+        "say": "あみ",
+        "kj": "",
+        "an": {
+          "p": [
+            [
+              "網",
+              "ami",
+              "烤网"
+            ],
+            [
+              "を",
+              "o",
+              "提示动作对象"
+            ]
+          ],
+          "n": "「〜できますか／もらえますか」用于礼貌询问是否可以办理或提供。"
+        }
+      },
+      {
+        "fig": "トング",
+        "kana": "トング",
+        "zh": "夹子",
+        "ex": "生肉用のトングをもう一つください。",
+        "exZh": "请再给我一个夹生肉用的夹子。",
+        "ro": "tongu",
+        "exKana": "なまにくようのトングをもうひとつください。",
+        "exRo": "namanikuyounotonguomouhitotsukudasai.",
+        "say": "トング",
+        "kj": "",
+        "an": {
+          "p": [
+            [
+              "トング",
+              "tongu",
+              "夹子"
+            ],
+            [
+              "ください",
+              "kudasai",
+              "请给我／请"
+            ]
+          ],
+          "n": "「〜ください」表示请求对方给某物或做某事。"
+        }
+      },
+      {
+        "fig": "焼き方",
+        "kana": "やきかた",
+        "zh": "烤法",
+        "ex": "このお肉、おすすめの焼き方はありますか。",
+        "exZh": "这块肉有推荐的烤法吗？",
+        "ro": "yakikata",
+        "exKana": "このおにく、おすすめのやきかたはありますか。",
+        "exRo": "konooniku, osusumenoyakikatahaarimasuka.",
+        "say": "やきかた",
+        "kj": "",
+        "an": {
+          "p": [
+            [
+              "焼き方",
+              "yakikata",
+              "烤法"
+            ]
+          ],
+          "n": "结合店内实际场景记住这句话，下次可以直接替换菜名或数量使用。"
+        }
+      },
+      {
+        "fig": "よく焼く",
+        "kana": "よくやく",
+        "zh": "烤熟透",
+        "ex": "店員：牛肉、鶏肉、豚肉はよく焼いてお召し上がりください。",
+        "exZh": "店员：牛肉、鸡肉和猪肉请烤熟透再吃。",
+        "ro": "yokuyaku",
+        "exKana": "てんいん：ぎゅうにく、とりにく、ぶたにくはよくやいておめしあがりください。",
+        "exRo": "ten'in: gyuuniku, toriniku, butanikuhayokuyaiteomeshiagarikudasai.",
+        "say": "よくやく",
+        "kj": "",
+        "an": {
+          "p": [
+            [
+              "よく焼く",
+              "yokuyaku",
+              "烤熟透"
+            ],
+            [
+              "ください",
+              "kudasai",
+              "请给我／请"
+            ]
+          ],
+          "n": "「店員：」表示店员说的话；「——」后是客人的回答（如有）。先练习听懂提问，再练习回答。"
+        }
+      },
+      {
+        "fig": "食べ放題",
+        "kana": "たべほうだい",
+        "zh": "吃到饱",
+        "ex": "食べ放題は何分制ですか。",
+        "exZh": "吃到饱限时多少分钟？",
+        "ro": "tabehoudai",
+        "exKana": "たべほうだいはなんぷんせいですか。",
+        "exRo": "tabehoudaihananpunseidesuka.",
+        "say": "たべほうだい",
+        "kj": "",
+        "an": {
+          "p": [
+            [
+              "食べ放題",
+              "tabehoudai",
+              "吃到饱"
+            ],
+            [
+              "ですか",
+              "desu ka",
+              "……吗？"
+            ]
+          ],
+          "n": "句末「ですか」表示礼貌疑问，可直接用于向店员询问。"
+        }
+      },
+      {
+        "fig": "コース",
+        "kana": "コース",
+        "zh": "套餐（固定菜单）",
+        "ex": "コースと単品、どちらがお得ですか。",
+        "exZh": "套餐和单点，哪个更划算？",
+        "ro": "kōsu",
+        "exKana": "コースとたんぴん、どちらがおとくですか。",
+        "exRo": "kōsutotanpin, dochiragaotokudesuka.",
+        "say": "コース",
+        "kj": "",
+        "an": {
+          "p": [
+            [
+              "コース",
+              "kōsu",
+              "套餐"
+            ],
+            [
+              "ですか",
+              "desu ka",
+              "……吗？"
+            ]
+          ],
+          "n": "句末「ですか」表示礼貌疑问，可直接用于向店员询问。"
+        }
+      },
+      {
+        "fig": "冷麺",
+        "kana": "れいめん",
+        "zh": "冷面（烤肉常见的收尾主食）",
+        "ex": "最後に冷麺を二つお願いします。",
+        "exZh": "最后来两份冷面。",
+        "ro": "reimen",
+        "exKana": "さいごにれいめんをふたつおねがいします。",
+        "exRo": "saigonireimenofutatsuonegaishimasu.",
+        "say": "れいめん",
+        "kj": "",
+        "an": {
+          "p": [
+            [
+              "冷麺",
+              "reimen",
+              "冷面"
+            ],
+            [
+              "お願いします",
+              "onegai shimasu",
+              "请、麻烦"
+            ]
+          ],
+          "n": "「〜お願いします」是点餐、付款或提出需求时常用的礼貌说法。"
+        }
+      },
+      {
+        "fig": "エプロン",
+        "kana": "エプロン",
+        "zh": "围裙（防油烟，店家常免费提供）",
+        "ex": "エプロンをお借りできますか。",
+        "exZh": "可以借一条围裙吗？",
+        "ro": "epuron",
+        "exKana": "エプロンをおかりできますか。",
+        "exRo": "epuronookaridekimasuka.",
+        "say": "エプロン",
+        "kj": "",
+        "an": {
+          "p": [
+            [
+              "エプロン",
+              "epuron",
+              "围裙"
+            ],
+            [
+              "できますか",
+              "dekimasu ka",
+              "可以……吗？"
+            ]
+          ],
+          "n": "「〜できますか／もらえますか」用于礼貌询问是否可以办理或提供。"
+        }
+      }
+    ]
+  },
+  {
+    "id": "c",
+    "title": "居酒屋（いざかや）",
+    "rule": "居酒屋常以 \u003cb\u003eとりあえず\u003c/b\u003e 开始点第一轮。\u003cb\u003eお通し\u003c/b\u003e 通常是收费小菜；\u003cb\u003eラストオーダー\u003c/b\u003e 指最后点单时间。",
+    "cards": [
+      {
+        "fig": "とりあえず",
+        "kana": "とりあえず",
+        "zh": "先来……（点第一轮饮料的习惯说法）",
+        "ex": "とりあえず、ハイボールを二つ。",
+        "exZh": "先来两杯威士忌苏打。",
+        "ro": "toriaezu",
+        "exKana": "とりあえず、ハイボールをふたつ。",
+        "exRo": "toriaezu, haibōruofutatsu.",
+        "say": "とりあえず",
+        "kj": "",
+        "an": {
+          "p": [
+            [
+              "とりあえず",
+              "toriaezu",
+              "先来……"
+            ],
+            [
+              "二つ",
+              "futatsu",
+              "两个"
+            ]
+          ],
+          "n": "结合店内实际场景记住这句话，下次可以直接替换菜名或数量使用。"
+        }
+      },
+      {
+        "fig": "生ビール",
+        "kana": "なまビール",
+        "zh": "生啤",
+        "ex": "生ビール、中ジョッキで一つください。",
+        "exZh": "请来一杯中杯生啤。",
+        "ro": "namabīru",
+        "exKana": "なまビール、ちゅうジョッキでひとつください。",
+        "exRo": "namabīru, chuujokkidehitotsukudasai.",
+        "say": "なまビール",
+        "kj": "",
+        "an": {
+          "p": [
+            [
+              "生ビール",
+              "namabīru",
+              "生啤"
+            ],
+            [
+              "ください",
+              "kudasai",
+              "请给我／请"
+            ]
+          ],
+          "n": "「〜ください」表示请求对方给某物或做某事。"
+        }
+      },
+      {
+        "fig": "ハイボール",
+        "kana": "ハイボール",
+        "zh": "威士忌苏打",
+        "ex": "彼のハイボール、薄めにしてもらえますか。",
+        "exZh": "他的威士忌苏打可以调淡一点吗？",
+        "ro": "haibōru",
+        "exKana": "かれのハイボール、うすめにしてもらえますか。",
+        "exRo": "karenohaibōru, usumenishitemoraemasuka.",
+        "say": "ハイボール",
+        "kj": "",
+        "an": {
+          "p": [
+            [
+              "ハイボール",
+              "haibōru",
+              "威士忌苏打"
+            ]
+          ],
+          "n": "「〜できますか／もらえますか」用于礼貌询问是否可以办理或提供。"
+        }
+      },
+      {
+        "fig": "サワー",
+        "kana": "サワー",
+        "zh": "沙瓦（烧酒兑果汁和苏打水）",
+        "ex": "サワーはどんな味がありますか。",
+        "exZh": "沙瓦有哪些口味？",
+        "ro": "sawā",
+        "exKana": "サワーはどんなあじがありますか。",
+        "exRo": "sawāhadonnaajigaarimasuka.",
+        "say": "サワー",
+        "kj": "",
+        "an": {
+          "p": [
+            [
+              "サワー",
+              "sawā",
+              "沙瓦"
+            ]
+          ],
+          "n": "结合店内实际场景记住这句话，下次可以直接替换菜名或数量使用。"
+        }
+      },
+      {
+        "fig": "日本酒",
+        "kana": "にほんしゅ",
+        "zh": "日本清酒（「辛口」指口感偏干、不甜，不是辣）",
+        "ex": "甘口の日本酒はありますか。",
+        "exZh": "有口感偏甜的清酒吗？",
+        "ro": "nihonshu",
+        "exKana": "あまくちのにほんしゅはありますか。",
+        "exRo": "amakuchinonihonshuhaarimasuka.",
+        "say": "にほんしゅ",
+        "kj": "",
+        "an": {
+          "p": [
+            [
+              "日本酒",
+              "nihonshu",
+              "日本清酒"
+            ]
+          ],
+          "n": "结合店内实际场景记住这句话，下次可以直接替换菜名或数量使用。"
+        }
+      },
+      {
+        "fig": "焼酎",
+        "kana": "しょうちゅう",
+        "zh": "日本烧酒",
+        "ex": "焼酎をお湯割りでお願いします。",
+        "exZh": "烧酒请兑热水。",
+        "ro": "shouchuu",
+        "exKana": "しょうちゅうをおゆわりでおねがいします。",
+        "exRo": "shouchuuooyuwarideonegaishimasu.",
+        "say": "しょうちゅう",
+        "kj": "",
+        "an": {
+          "p": [
+            [
+              "焼酎",
+              "shouchuu",
+              "日本烧酒"
+            ],
+            [
+              "お願いします",
+              "onegai shimasu",
+              "请、麻烦"
+            ]
+          ],
+          "n": "「〜お願いします」是点餐、付款或提出需求时常用的礼貌说法。"
+        }
+      },
+      {
+        "fig": "ソフトドリンク",
+        "kana": "ソフトドリンク",
+        "zh": "无酒精饮料",
+        "ex": "ソフトドリンクは何がありますか。",
+        "exZh": "有哪些不含酒精的饮料？",
+        "ro": "sofutodorinku",
+        "exKana": "ソフトドリンクはなにがありますか。",
+        "exRo": "sofutodorinkuhananigaarimasuka.",
+        "say": "ソフトドリンク",
+        "kj": "",
+        "an": {
+          "p": [
+            [
+              "ソフトドリンク",
+              "sofutodorinku",
+              "无酒精饮料"
+            ]
+          ],
+          "n": "结合店内实际场景记住这句话，下次可以直接替换菜名或数量使用。"
+        }
+      },
+      {
+        "fig": "お通し",
+        "kana": "おとおし",
+        "zh": "开胃小菜（多数店会自动上并收费）",
+        "ex": "これはお通しですか。",
+        "exZh": "这是开胃小菜吗？",
+        "ro": "otooshi",
+        "exKana": "これはおとおしですか。",
+        "exRo": "korehaotooshidesuka.",
+        "say": "おとおし",
+        "kj": "",
+        "an": {
+          "p": [
+            [
+              "お通し",
+              "otooshi",
+              "开胃小菜"
+            ],
+            [
+              "ですか",
+              "desu ka",
+              "……吗？"
+            ]
+          ],
+          "n": "句末「ですか」表示礼貌疑问，可直接用于向店员询问。"
+        }
+      },
+      {
+        "fig": "焼き鳥",
+        "kana": "やきとり",
+        "zh": "烤鸡肉串",
+        "ex": "店員：焼き鳥は塩とタレ、どちらにしますか。",
+        "exZh": "店员：烤串要盐味还是酱汁？",
+        "ro": "yakitori",
+        "exKana": "てんいん：やきとりはしおとタレ、どちらにしますか。",
+        "exRo": "ten'in: yakitorihashiototare, dochiranishimasuka.",
+        "say": "やきとり",
+        "kj": "",
+        "an": {
+          "p": [
+            [
+              "焼き鳥",
+              "yakitori",
+              "烤鸡肉串"
+            ]
+          ],
+          "n": "「店員：」表示店员说的话；「——」后是客人的回答（如有）。先练习听懂提问，再练习回答。"
+        }
+      },
+      {
+        "fig": "唐揚げ",
+        "kana": "からあげ",
+        "zh": "日式炸鸡块",
+        "ex": "唐揚げにレモンをかけてもいいですか。",
+        "exZh": "可以给炸鸡块挤柠檬吗？",
+        "ro": "karaage",
+        "exKana": "からあげにレモンをかけてもいいですか。",
+        "exRo": "karaageniremonokaketemoiidesuka.",
+        "say": "からあげ",
+        "kj": "",
+        "an": {
+          "p": [
+            [
+              "唐揚げ",
+              "karaage",
+              "日式炸鸡块"
+            ],
+            [
+              "ですか",
+              "desu ka",
+              "……吗？"
+            ]
+          ],
+          "n": "句末「ですか」表示礼貌疑问，可直接用于向店员询问。"
+        }
+      },
+      {
+        "fig": "おすすめ",
+        "kana": "おすすめ",
+        "zh": "推荐",
+        "ex": "今日のおすすめは何ですか。",
+        "exZh": "今天有什么推荐？",
+        "ro": "osusume",
+        "exKana": "きょうのおすすめはなんですか。",
+        "exRo": "kyounoosusumehanandesuka.",
+        "say": "おすすめ",
+        "kj": "",
+        "an": {
+          "p": [
+            [
+              "おすすめ",
+              "osusume",
+              "推荐"
+            ],
+            [
+              "ですか",
+              "desu ka",
+              "……吗？"
+            ]
+          ],
+          "n": "句末「ですか」表示礼貌疑问，可直接用于向店员询问。"
+        }
+      },
+      {
+        "fig": "飲み放題",
+        "kana": "のみほうだい",
+        "zh": "酒水畅饮",
+        "ex": "店員：飲み放題は、全員でのご注文をお願いしております。",
+        "exZh": "店员：畅饮需要同桌全员一起点。",
+        "ro": "nomihoudai",
+        "exKana": "てんいん：のみほうだいは、ぜんいんでのごちゅうもんをおねがいしております。",
+        "exRo": "ten'in: nomihoudaiha, zen'indenogochuumonoonegaishiteorimasu.",
+        "say": "のみほうだい",
+        "kj": "",
+        "an": {
+          "p": [
+            [
+              "飲み放題",
+              "nomihoudai",
+              "酒水畅饮"
+            ],
+            [
+              "で",
+              "de",
+              "用……方式／按……"
+            ]
+          ],
+          "n": "「店員：」表示店员说的话；「——」后是客人的回答（如有）。先练习听懂提问，再练习回答。"
+        }
+      },
+      {
+        "fig": "ラストオーダー",
+        "kana": "ラストオーダー",
+        "zh": "最后点单",
+        "ex": "店員：そろそろラストオーダーのお時間ですが、ご注文はよろしいですか。",
+        "exZh": "店员：马上就要最后点单了，还需要点什么吗？",
+        "ro": "rasutoōdā",
+        "exKana": "てんいん：そろそろラストオーダーのおじかんですが、ごちゅうもんはよろしいですか。",
+        "exRo": "ten'in: sorosororasutoōdānoojikandesuga, gochuumonhayoroshiidesuka.",
+        "say": "ラストオーダー",
+        "kj": "",
+        "an": {
+          "p": [
+            [
+              "ラストオーダー",
+              "rasutoōdā",
+              "最后点单"
+            ],
+            [
+              "ですか",
+              "desu ka",
+              "……吗？"
+            ]
+          ],
+          "n": "「店員：」表示店员说的话；「——」后是客人的回答（如有）。先练习听懂提问，再练习回答。"
+        }
+      },
+      {
+        "fig": "おかわり",
+        "kana": "おかわり",
+        "zh": "再来一杯（一份）",
+        "ex": "これ、おかわりお願いします。",
+        "exZh": "这个再来一杯。",
+        "ro": "okawari",
+        "exKana": "これ、おかわりおねがいします。",
+        "exRo": "kore, okawarionegaishimasu.",
+        "say": "おかわり",
+        "kj": "",
+        "an": {
+          "p": [
+            [
+              "おかわり",
+              "okawari",
+              "再来一杯"
+            ],
+            [
+              "お願いします",
+              "onegai shimasu",
+              "请、麻烦"
+            ]
+          ],
+          "n": "「〜お願いします」是点餐、付款或提出需求时常用的礼貌说法。"
+        }
+      },
+      {
+        "fig": "締め",
+        "kana": "しめ",
+        "zh": "收尾的主食（饭、面等）",
+        "ex": "締めにお茶漬けを二つください。",
+        "exZh": "来两份茶泡饭收尾。",
+        "ro": "shime",
+        "exKana": "しめにおちゃづけをふたつください。",
+        "exRo": "shimeniochazukeofutatsukudasai.",
+        "say": "しめ",
+        "kj": "",
+        "an": {
+          "p": [
+            [
+              "締め",
+              "shime",
+              "收尾的主食"
+            ],
+            [
+              "ください",
+              "kudasai",
+              "请给我／请"
+            ]
+          ],
+          "n": "「〜ください」表示请求对方给某物或做某事。"
+        }
+      }
+    ]
+  },
+  {
+    "id": "d",
+    "title": "快餐店（ファストフード）",
+    "rule": "快餐店常问 \u003cb\u003e店内\u003c/b\u003e（店内吃）还是 \u003cb\u003e持ち帰り\u003c/b\u003e（外带）。点餐时注意 \u003cb\u003e並盛\u003c/b\u003e、\u003cb\u003e大盛\u003c/b\u003e 和 \u003cb\u003e単品\u003c/b\u003e 的区别。",
+    "cards": [
+      {
+        "fig": "牛丼",
+        "kana": "ぎゅうどん",
+        "zh": "牛肉盖饭",
+        "ex": "牛丼に生卵をつけてください。",
+        "exZh": "牛肉盖饭请加一个生鸡蛋。",
+        "ro": "gyuudon",
+        "exKana": "ぎゅうどんになまたまごをつけてください。",
+        "exRo": "gyuudonninamatamagootsuketekudasai.",
+        "say": "ぎゅうどん",
+        "kj": "",
+        "an": {
+          "p": [
+            [
+              "牛丼",
+              "gyuudon",
+              "牛肉盖饭"
+            ],
+            [
+              "ください",
+              "kudasai",
+              "请给我／请"
+            ]
+          ],
+          "n": "「〜ください」表示请求对方给某物或做某事。"
+        }
+      },
+      {
+        "fig": "並盛",
+        "kana": "なみもり",
+        "zh": "普通份",
+        "ex": "並盛でお願いします。",
+        "exZh": "请给我普通份。",
+        "ro": "namimori",
+        "exKana": "なみもりでおねがいします。",
+        "exRo": "namimorideonegaishimasu.",
+        "say": "なみもり",
+        "kj": "",
+        "an": {
+          "p": [
+            [
+              "並盛",
+              "namimori",
+              "普通份"
+            ],
+            [
+              "お願いします",
+              "onegai shimasu",
+              "请、麻烦"
+            ]
+          ],
+          "n": "「〜お願いします」是点餐、付款或提出需求时常用的礼貌说法。"
+        }
+      },
+      {
+        "fig": "大盛",
+        "kana": "おおもり",
+        "zh": "大份",
+        "ex": "大盛にすると、いくらになりますか。",
+        "exZh": "换成大份要多少钱？",
+        "ro": "oomori",
+        "exKana": "おおもりにすると、いくらになりますか。",
+        "exRo": "oomorinisuruto, ikuraninarimasuka.",
+        "say": "おおもり",
+        "kj": "",
+        "an": {
+          "p": [
+            [
+              "大盛",
+              "oomori",
+              "大份"
+            ]
+          ],
+          "n": "结合店内实际场景记住这句话，下次可以直接替换菜名或数量使用。"
+        }
+      },
+      {
+        "fig": "小盛",
+        "kana": "こもり",
+        "zh": "小份（部分连锁店叫「ミニ」）",
+        "ex": "小盛はありますか。",
+        "exZh": "有小份吗？",
+        "ro": "komori",
+        "exKana": "こもりはありますか。",
+        "exRo": "komorihaarimasuka.",
+        "say": "こもり",
+        "kj": "",
+        "an": {
+          "p": [
+            [
+              "小盛",
+              "komori",
+              "小份"
+            ]
+          ],
+          "n": "结合店内实际场景记住这句话，下次可以直接替换菜名或数量使用。"
+        }
+      },
+      {
+        "fig": "つゆだく",
+        "kana": "つゆだく",
+        "zh": "多浇汤汁（牛丼用语）",
+        "ex": "つゆだくでお願いします。",
+        "exZh": "汤汁请多浇一点。",
+        "ro": "tsuyudaku",
+        "exKana": "つゆだくでおねがいします。",
+        "exRo": "tsuyudakudeonegaishimasu.",
+        "say": "つゆだく",
+        "kj": "",
+        "an": {
+          "p": [
+            [
+              "つゆだく",
+              "tsuyudaku",
+              "多浇汤汁"
+            ],
+            [
+              "お願いします",
+              "onegai shimasu",
+              "请、麻烦"
+            ]
+          ],
+          "n": "「〜お願いします」是点餐、付款或提出需求时常用的礼貌说法。"
+        }
+      },
+      {
+        "fig": "セット",
+        "kana": "セット",
+        "zh": "套餐",
+        "ex": "セットのドリンクはコーラでお願いします。",
+        "exZh": "套餐的饮料请给我可乐。",
+        "ro": "setto",
+        "exKana": "セットのドリンクはコーラでおねがいします。",
+        "exRo": "settonodorinkuhakōradeonegaishimasu.",
+        "say": "セット",
+        "kj": "",
+        "an": {
+          "p": [
+            [
+              "セット",
+              "setto",
+              "套餐"
+            ],
+            [
+              "お願いします",
+              "onegai shimasu",
+              "请、麻烦"
+            ]
+          ],
+          "n": "「〜お願いします」是点餐、付款或提出需求时常用的礼貌说法。"
+        }
+      },
+      {
+        "fig": "単品",
+        "kana": "たんぴん",
+        "zh": "单点",
+        "ex": "店員：セットになさいますか。——いいえ、単品で。",
+        "exZh": "店员：要套餐吗？——不用，单点。",
+        "ro": "tanpin",
+        "exKana": "てんいん：セットになさいますか。——いいえ、たんぴんで。",
+        "exRo": "ten'in: settoninasaimasuka. ——iie, tanpinde.",
+        "say": "たんぴん",
+        "kj": "",
+        "an": {
+          "p": [
+            [
+              "単品",
+              "tanpin",
+              "单点"
+            ],
+            [
+              "で",
+              "de",
+              "用……方式／按……"
+            ]
+          ],
+          "n": "「店員：」表示店员说的话；「——」后是客人的回答（如有）。先练习听懂提问，再练习回答。"
+        }
+      },
+      {
+        "fig": "以上",
+        "kana": "いじょう",
+        "zh": "就这些",
+        "ex": "店員：ご注文は以上でよろしいですか。——はい、以上です。",
+        "exZh": "店员：就点这些吗？——对，就这些。",
+        "ro": "ijou",
+        "exKana": "てんいん：ごちゅうもんはいじょうでよろしいですか。——はい、いじょうです。",
+        "exRo": "ten'in: gochuumonhaijoudeyoroshiidesuka. ——hai, ijoudesu.",
+        "say": "いじょう",
+        "kj": "",
+        "an": {
+          "p": [
+            [
+              "以上",
+              "ijou",
+              "就这些"
+            ],
+            [
+              "ですか",
+              "desu ka",
+              "……吗？"
+            ]
+          ],
+          "n": "「店員：」表示店员说的话；「——」后是客人的回答（如有）。先练习听懂提问，再练习回答。"
+        }
+      },
+      {
+        "fig": "店内",
+        "kana": "てんない",
+        "zh": "店内用餐",
+        "ex": "店員：店内でお召し上がりですか。——はい、店内で。",
+        "exZh": "店员：在店里吃吗？——对，在店里吃。",
+        "ro": "tennai",
+        "exKana": "てんいん：てんないでおめしあがりですか。——はい、てんないで。",
+        "exRo": "ten'in: tennaideomeshiagaridesuka. ——hai, tennaide.",
+        "say": "てんない",
+        "kj": "",
+        "an": {
+          "p": [
+            [
+              "店内",
+              "tennai",
+              "店内用餐"
+            ],
+            [
+              "ですか",
+              "desu ka",
+              "……吗？"
+            ]
+          ],
+          "n": "「店員：」表示店员说的话；「——」后是客人的回答（如有）。先练习听懂提问，再练习回答。"
+        }
+      },
+      {
+        "fig": "持ち帰り",
+        "kana": "もちかえり",
+        "zh": "外带（外带消费税8%，堂食10%）",
+        "ex": "持ち帰りだと値段は変わりますか。",
+        "exZh": "外带的话价格会不一样吗？",
+        "ro": "mochikaeri",
+        "exKana": "もちかえりだとねだんはかわりますか。",
+        "exRo": "mochikaeridatonedanhakawarimasuka.",
+        "say": "もちかえり",
+        "kj": "",
+        "an": {
+          "p": [
+            [
+              "持ち帰り",
+              "mochikaeri",
+              "外带"
+            ]
+          ],
+          "n": "结合店内实际场景记住这句话，下次可以直接替换菜名或数量使用。"
+        }
+      },
+      {
+        "fig": "袋",
+        "kana": "ふくろ",
+        "zh": "袋子（多数店收费）",
+        "ex": "店員：袋はご利用ですか。——はい、一つお願いします。",
+        "exZh": "店员：需要袋子吗？——要，一个。",
+        "ro": "fukuro",
+        "exKana": "てんいん：ふくろはごりようですか。——はい、ひとつおねがいします。",
+        "exRo": "ten'in: fukurohagoriyoudesuka. ——hai, hitotsuonegaishimasu.",
+        "say": "ふくろ",
+        "kj": "",
+        "an": {
+          "p": [
+            [
+              "袋",
+              "fukuro",
+              "袋子"
+            ],
+            [
+              "お願いします",
+              "onegai shimasu",
+              "请、麻烦"
+            ]
+          ],
+          "n": "「店員：」表示店员说的话；「——」后是客人的回答（如有）。先练习听懂提问，再练习回答。"
+        }
+      },
+      {
+        "fig": "箸",
+        "kana": "はし",
+        "zh": "筷子",
+        "ex": "店員：お箸はお付けしますか。——二膳お願いします。",
+        "exZh": "店员：需要筷子吗？——请给两双。",
+        "ro": "hashi",
+        "exKana": "てんいん：おはしはおつけしますか。——にぜんおねがいします。",
+        "exRo": "ten'in: ohashihaotsukeshimasuka. ——nizen'onegaishimasu.",
+        "say": "はし",
+        "kj": "",
+        "an": {
+          "p": [
+            [
+              "箸",
+              "hashi",
+              "筷子"
+            ],
+            [
+              "お願いします",
+              "onegai shimasu",
+              "请、麻烦"
+            ]
+          ],
+          "n": "「店員：」表示店员说的话；「——」后是客人的回答（如有）。先练习听懂提问，再练习回答。"
+        }
+      },
+      {
+        "fig": "番号",
+        "kana": "ばんごう",
+        "zh": "号码",
+        "ex": "店員：番号でお呼びしますので、少々お待ちください。",
+        "exZh": "店员：会叫号，请稍等。",
+        "ro": "bangou",
+        "exKana": "てんいん：ばんごうでおよびしますので、しょうしょうおまちください。",
+        "exRo": "ten'in: bangoudeoyobishimasunode, shoushouomachikudasai.",
+        "say": "ばんごう",
+        "kj": "",
+        "an": {
+          "p": [
+            [
+              "番号",
+              "bangou",
+              "号码"
+            ],
+            [
+              "ください",
+              "kudasai",
+              "请给我／请"
+            ]
+          ],
+          "n": "「店員：」表示店员说的话；「——」后是客人的回答（如有）。先练习听懂提问，再练习回答。"
+        }
+      },
+      {
+        "fig": "モバイルオーダー",
+        "kana": "モバイルオーダー",
+        "zh": "手机下单",
+        "ex": "モバイルオーダーの受け取りはどこですか。",
+        "exZh": "手机下单的在哪里取餐？",
+        "ro": "mobairuōdā",
+        "exKana": "モバイルオーダーのうけとりはどこですか。",
+        "exRo": "mobairuōdānouketorihadokodesuka.",
+        "say": "モバイルオーダー",
+        "kj": "",
+        "an": {
+          "p": [
+            [
+              "モバイルオーダー",
+              "mobairuōdā",
+              "手机下单"
+            ],
+            [
+              "ですか",
+              "desu ka",
+              "……吗？"
+            ]
+          ],
+          "n": "句末「ですか」表示礼貌疑问，可直接用于向店员询问。"
+        }
+      },
+      {
+        "fig": "返却口",
+        "kana": "へんきゃくぐち",
+        "zh": "餐具回收处",
+        "ex": "返却口はどこですか。",
+        "exZh": "餐具回收处在哪里？",
+        "ro": "henkyakuguchi",
+        "exKana": "へんきゃくぐちはどこですか。",
+        "exRo": "henkyakuguchihadokodesuka.",
+        "say": "へんきゃくぐち",
+        "kj": "",
+        "an": {
+          "p": [
+            [
+              "返却口",
+              "henkyakuguchi",
+              "餐具回收处"
+            ],
+            [
+              "ですか",
+              "desu ka",
+              "……吗？"
+            ]
+          ],
+          "n": "句末「ですか」表示礼貌疑问，可直接用于向店员询问。"
+        }
+      }
+    ]
+  },
+  {
+    "id": "e",
+    "title": "拉面店（ラーメン屋）",
+    "rule": "不少拉面店先在 \u003cb\u003e券売機\u003c/b\u003e 买 \u003cb\u003e食券\u003c/b\u003e。\u003cb\u003e硬め\u003c/b\u003e、\u003cb\u003e濃いめ\u003c/b\u003e、\u003cb\u003e少なめ\u003c/b\u003e 可表达面条硬度、味道和油量偏好；具体选项因店而异。",
+    "cards": [
+      {
+        "fig": "券売機",
+        "kana": "けんばいき",
+        "zh": "自动售券机（按钮多为汉字）",
+        "ex": "店員：先に券売機で食券をお買い求めください。",
+        "exZh": "店员：请先在售券机买餐券。",
+        "ro": "kenbaiki",
+        "exKana": "てんいん：さきにけんばいきでしょっけんをおかいもとめください。",
+        "exRo": "ten'in: sakinikenbaikideshokkenookaimotomekudasai.",
+        "say": "けんばいき",
+        "kj": "",
+        "an": {
+          "p": [
+            [
+              "券売機",
+              "kenbaiki",
+              "自动售券机"
+            ],
+            [
+              "ください",
+              "kudasai",
+              "请给我／请"
+            ]
+          ],
+          "n": "「店員：」表示店员说的话；「——」后是客人的回答（如有）。先练习听懂提问，再练习回答。"
+        }
+      },
+      {
+        "fig": "食券",
+        "kana": "しょっけん",
+        "zh": "餐券",
+        "ex": "食券はここに置けばいいですか。",
+        "exZh": "餐券放这里就可以吗？",
+        "ro": "shokken",
+        "exKana": "しょっけんはここにおけばいいですか。",
+        "exRo": "shokkenhakokoniokebaiidesuka.",
+        "say": "しょっけん",
+        "kj": "",
+        "an": {
+          "p": [
+            [
+              "食券",
+              "shokken",
+              "餐券"
+            ],
+            [
+              "ですか",
+              "desu ka",
+              "……吗？"
+            ]
+          ],
+          "n": "句末「ですか」表示礼貌疑问，可直接用于向店员询问。"
+        }
+      },
+      {
+        "fig": "醤油",
+        "kana": "しょうゆ",
+        "zh": "酱油（汤底口味）",
+        "ex": "醤油ラーメンのボタンはどれですか。",
+        "exZh": "酱油拉面是哪个按钮？",
+        "ro": "shouyu",
+        "exKana": "しょうゆラーメンのボタンはどれですか。",
+        "exRo": "shouyurāmennobotanhadoredesuka.",
+        "say": "しょうゆ",
+        "kj": "",
+        "an": {
+          "p": [
+            [
+              "醤油",
+              "shouyu",
+              "酱油"
+            ],
+            [
+              "ですか",
+              "desu ka",
+              "……吗？"
+            ]
+          ],
+          "n": "句末「ですか」表示礼貌疑问，可直接用于向店员询问。"
+        }
+      },
+      {
+        "fig": "味噌",
+        "kana": "みそ",
+        "zh": "味噌（汤底口味）",
+        "ex": "味噌ラーメンは辛いですか。",
+        "exZh": "味噌拉面辣吗？",
+        "ro": "miso",
+        "exKana": "みそラーメンはからいですか。",
+        "exRo": "misorāmenhakaraidesuka.",
+        "say": "みそ",
+        "kj": "",
+        "an": {
+          "p": [
+            [
+              "味噌",
+              "miso",
+              "味噌"
+            ],
+            [
+              "ですか",
+              "desu ka",
+              "……吗？"
+            ]
+          ],
+          "n": "句末「ですか」表示礼貌疑问，可直接用于向店员询问。"
+        }
+      },
+      {
+        "fig": "豚骨",
+        "kana": "とんこつ",
+        "zh": "猪骨（汤底口味）",
+        "ex": "豚骨スープはこってりしていますか。",
+        "exZh": "猪骨汤很浓厚吗？",
+        "ro": "tonkotsu",
+        "exKana": "とんこつスープはこってりしていますか。",
+        "exRo": "tonkotsusūpuhakotterishiteimasuka.",
+        "say": "とんこつ",
+        "kj": "",
+        "an": {
+          "p": [
+            [
+              "豚骨",
+              "tonkotsu",
+              "猪骨"
+            ]
+          ],
+          "n": "结合店内实际场景记住这句话，下次可以直接替换菜名或数量使用。"
+        }
+      },
+      {
+        "fig": "お好み",
+        "kana": "おこのみ",
+        "zh": "个人偏好（面硬度、口味浓淡、油量）",
+        "ex": "店員：お好みはございますか。——全部普通で。",
+        "exZh": "店员：有什么偏好吗？——全部按标准。",
+        "ro": "okonomi",
+        "exKana": "てんいん：おこのみはございますか。——ぜんぶふつうで。",
+        "exRo": "ten'in: okonomihagozaimasuka. ——zenbufutsuude.",
+        "say": "おこのみ",
+        "kj": "",
+        "an": {
+          "p": [
+            [
+              "お好み",
+              "okonomi",
+              "个人偏好"
+            ],
+            [
+              "で",
+              "de",
+              "用……方式／按……"
+            ]
+          ],
+          "n": "「店員：」表示店员说的话；「——」后是客人的回答（如有）。先练习听懂提问，再练习回答。"
+        }
+      },
+      {
+        "fig": "硬め",
+        "kana": "かため",
+        "zh": "面偏硬",
+        "ex": "麺は硬めでお願いします。",
+        "exZh": "面请煮硬一点。",
+        "ro": "katame",
+        "exKana": "めんはかためでおねがいします。",
+        "exRo": "menhakatamedeonegaishimasu.",
+        "say": "かため",
+        "kj": "",
+        "an": {
+          "p": [
+            [
+              "硬め",
+              "katame",
+              "面偏硬"
+            ],
+            [
+              "お願いします",
+              "onegai shimasu",
+              "请、麻烦"
+            ]
+          ],
+          "n": "「〜お願いします」是点餐、付款或提出需求时常用的礼貌说法。"
+        }
+      },
+      {
+        "fig": "濃いめ",
+        "kana": "こいめ",
+        "zh": "口味偏浓",
+        "ex": "味は濃いめにしてください。",
+        "exZh": "口味请浓一点。",
+        "ro": "koime",
+        "exKana": "あじはこいめにしてください。",
+        "exRo": "ajihakoimenishitekudasai.",
+        "say": "こいめ",
+        "kj": "",
+        "an": {
+          "p": [
+            [
+              "濃いめ",
+              "koime",
+              "口味偏浓"
+            ],
+            [
+              "ください",
+              "kudasai",
+              "请给我／请"
+            ]
+          ],
+          "n": "「〜ください」表示请求对方给某物或做某事。"
+        }
+      },
+      {
+        "fig": "油",
+        "kana": "あぶら",
+        "zh": "油量（家系拉面也写作「脂」）",
+        "ex": "油は少なめでお願いします。",
+        "exZh": "油请少放一点。",
+        "ro": "abura",
+        "exKana": "あぶらはすくなめでおねがいします。",
+        "exRo": "aburahasukunamedeonegaishimasu.",
+        "say": "あぶら",
+        "kj": "",
+        "an": {
+          "p": [
+            [
+              "油",
+              "abura",
+              "油量"
+            ],
+            [
+              "お願いします",
+              "onegai shimasu",
+              "请、麻烦"
+            ]
+          ],
+          "n": "「〜お願いします」是点餐、付款或提出需求时常用的礼貌说法。"
+        }
+      },
+      {
+        "fig": "少なめ",
+        "kana": "すくなめ",
+        "zh": "少一点",
+        "ex": "麺少なめにできますか。",
+        "exZh": "面可以少一点吗？",
+        "ro": "sukuname",
+        "exKana": "めんすくなめにできますか。",
+        "exRo": "mensukunamenidekimasuka.",
+        "say": "すくなめ",
+        "kj": "",
+        "an": {
+          "p": [
+            [
+              "少なめ",
+              "sukuname",
+              "少一点"
+            ],
+            [
+              "できますか",
+              "dekimasu ka",
+              "可以……吗？"
+            ]
+          ],
+          "n": "「〜できますか／もらえますか」用于礼貌询问是否可以办理或提供。"
+        }
+      },
+      {
+        "fig": "替え玉",
+        "kana": "かえだま",
+        "zh": "加面（只加面不加汤；可指定硬度：普通、カタ、バリカタ＝超硬）",
+        "ex": "替え玉、普通でお願いします。",
+        "exZh": "加一份面，按标准的。",
+        "ro": "kaedama",
+        "exKana": "かえだま、ふつうでおねがいします。",
+        "exRo": "kaedama, futsuudeonegaishimasu.",
+        "say": "かえだま",
+        "kj": "",
+        "an": {
+          "p": [
+            [
+              "替え玉",
+              "kaedama",
+              "加面"
+            ],
+            [
+              "お願いします",
+              "onegai shimasu",
+              "请、麻烦"
+            ]
+          ],
+          "n": "「〜お願いします」是点餐、付款或提出需求时常用的礼貌说法。"
+        }
+      },
+      {
+        "fig": "チャーシュー",
+        "kana": "チャーシュー",
+        "zh": "叉烧",
+        "ex": "チャーシューを追加できますか。",
+        "exZh": "可以加叉烧吗？",
+        "ro": "chāshū",
+        "exKana": "チャーシューをついかできますか。",
+        "exRo": "chāshūotsuikadekimasuka.",
+        "say": "チャーシュー",
+        "kj": "",
+        "an": {
+          "p": [
+            [
+              "チャーシュー",
+              "chāshū",
+              "叉烧"
+            ],
+            [
+              "できますか",
+              "dekimasu ka",
+              "可以……吗？"
+            ]
+          ],
+          "n": "「〜できますか／もらえますか」用于礼貌询问是否可以办理或提供。"
+        }
+      },
+      {
+        "fig": "味玉",
+        "kana": "あじたま",
+        "zh": "溏心卤蛋",
+        "ex": "味玉を一つ追加でお願いします。",
+        "exZh": "请加一个溏心蛋。",
+        "ro": "ajitama",
+        "exKana": "あじたまをひとつついかでおねがいします。",
+        "exRo": "ajitamaohitotsutsuikadeonegaishimasu.",
+        "say": "あじたま",
+        "kj": "",
+        "an": {
+          "p": [
+            [
+              "味玉",
+              "ajitama",
+              "溏心卤蛋"
+            ],
+            [
+              "お願いします",
+              "onegai shimasu",
+              "请、麻烦"
+            ]
+          ],
+          "n": "「〜お願いします」是点餐、付款或提出需求时常用的礼貌说法。"
+        }
+      },
+      {
+        "fig": "トッピング",
+        "kana": "トッピング",
+        "zh": "加料",
+        "ex": "トッピングも券売機で買うんですか。",
+        "exZh": "加料也要在售券机买吗？",
+        "ro": "toppingu",
+        "exKana": "トッピングもけんばいきでかうんですか。",
+        "exRo": "toppingumokenbaikidekaundesuka.",
+        "say": "トッピング",
+        "kj": "",
+        "an": {
+          "p": [
+            [
+              "トッピング",
+              "toppingu",
+              "加料"
+            ],
+            [
+              "ですか",
+              "desu ka",
+              "……吗？"
+            ]
+          ],
+          "n": "句末「ですか」表示礼貌疑问，可直接用于向店员询问。"
+        }
+      },
+      {
+        "fig": "ネギ",
+        "kana": "ネギ",
+        "zh": "葱",
+        "ex": "ネギ多めでお願いします。",
+        "exZh": "葱请多放点。",
+        "ro": "negi",
+        "exKana": "ネギおおめでおねがいします。",
+        "exRo": "negioomedeonegaishimasu.",
+        "say": "ネギ",
+        "kj": "",
+        "an": {
+          "p": [
+            [
+              "ネギ",
+              "negi",
+              "葱"
+            ],
+            [
+              "お願いします",
+              "onegai shimasu",
+              "请、麻烦"
+            ]
+          ],
+          "n": "「〜お願いします」是点餐、付款或提出需求时常用的礼貌说法。"
+        }
+      }
+    ]
+  },
+  {
+    "id": "f",
+    "title": "咖啡厅（カフェ）",
+    "rule": "咖啡厅可先回答 \u003cb\u003eホット／アイス\u003c/b\u003e（热／冰）和 \u003cb\u003eサイズ\u003c/b\u003e（杯型），再确认 \u003cb\u003e店内／テイクアウト\u003c/b\u003e；座位、插座和 Wi-Fi 可以直接礼貌询问。",
+    "cards": [
+      {
+        "fig": "ブレンド",
+        "kana": "ブレンド",
+        "zh": "混合咖啡（店里的招牌基础款）",
+        "ex": "ブレンドを一つください。",
+        "exZh": "请来一杯招牌咖啡。",
+        "ro": "burendo",
+        "exKana": "ブレンドをひとつください。",
+        "exRo": "burendoohitotsukudasai.",
+        "say": "ブレンド",
+        "kj": "",
+        "an": {
+          "p": [
+            [
+              "ブレンド",
+              "burendo",
+              "混合咖啡"
+            ],
+            [
+              "ください",
+              "kudasai",
+              "请给我／请"
+            ]
+          ],
+          "n": "「〜ください」表示请求对方给某物或做某事。"
+        }
+      },
+      {
+        "fig": "ホット",
+        "kana": "ホット",
+        "zh": "热饮",
+        "ex": "店員：ホットとアイス、どちらになさいますか。——ホットで。",
+        "exZh": "店员：要热的还是冰的？——热的。",
+        "ro": "hotto",
+        "exKana": "てんいん：ホットとアイス、どちらになさいますか。——ホットで。",
+        "exRo": "ten'in: hottotoaisu, dochiraninasaimasuka. ——hottode.",
+        "say": "ホット",
+        "kj": "",
+        "an": {
+          "p": [
+            [
+              "ホット",
+              "hotto",
+              "热饮"
+            ],
+            [
+              "で",
+              "de",
+              "用……方式／按……"
+            ]
+          ],
+          "n": "「店員：」表示店员说的话；「——」后是客人的回答（如有）。先练习听懂提问，再练习回答。"
+        }
+      },
+      {
+        "fig": "アイス",
+        "kana": "アイス",
+        "zh": "冰饮",
+        "ex": "アイスラテをLサイズでお願いします。",
+        "exZh": "请来一杯冰拿铁，要大杯。",
+        "ro": "aisu",
+        "exKana": "アイスラテをエルサイズでおねがいします。",
+        "exRo": "aisurateoerusaizudeonegaishimasu.",
+        "say": "アイス",
+        "kj": "",
+        "an": {
+          "p": [
+            [
+              "アイス",
+              "aisu",
+              "冰饮"
+            ],
+            [
+              "お願いします",
+              "onegai shimasu",
+              "请、麻烦"
+            ]
+          ],
+          "n": "「〜お願いします」是点餐、付款或提出需求时常用的礼貌说法。"
+        }
+      },
+      {
+        "fig": "サイズ",
+        "kana": "サイズ",
+        "zh": "杯型（星巴克为ショート/トール/グランデ/ベンティ）",
+        "ex": "店員：サイズはいかがなさいますか。——グランデで。",
+        "exZh": "店员：要什么杯型？——大杯。",
+        "ro": "saizu",
+        "exKana": "てんいん：サイズはいかがなさいますか。——グランデで。",
+        "exRo": "ten'in: saizuhaikaganasaimasuka. ——gurandede.",
+        "say": "サイズ",
+        "kj": "",
+        "an": {
+          "p": [
+            [
+              "サイズ",
+              "saizu",
+              "杯型"
+            ],
+            [
+              "で",
+              "de",
+              "用……方式／按……"
+            ]
+          ],
+          "n": "「店員：」表示店员说的话；「——」后是客人的回答（如有）。先练习听懂提问，再练习回答。"
+        }
+      },
+      {
+        "fig": "氷",
+        "kana": "こおり",
+        "zh": "冰块",
+        "ex": "氷少なめでお願いします。",
+        "exZh": "请少放冰。",
+        "ro": "koori",
+        "exKana": "こおりすくなめでおねがいします。",
+        "exRo": "koorisukunamedeonegaishimasu.",
+        "say": "こおり",
+        "kj": "",
+        "an": {
+          "p": [
+            [
+              "氷",
+              "koori",
+              "冰块"
+            ],
+            [
+              "お願いします",
+              "onegai shimasu",
+              "请、麻烦"
+            ]
+          ],
+          "n": "「〜お願いします」是点餐、付款或提出需求时常用的礼貌说法。"
+        }
+      },
+      {
+        "fig": "豆乳",
+        "kana": "とうにゅう",
+        "zh": "豆奶",
+        "ex": "ミルクを豆乳に変えられますか。",
+        "exZh": "牛奶可以换成豆奶吗？",
+        "ro": "tounyuu",
+        "exKana": "ミルクをとうにゅうにかえられますか。",
+        "exRo": "mirukuotounyuunikaeraremasuka.",
+        "say": "とうにゅう",
+        "kj": "",
+        "an": {
+          "p": [
+            [
+              "豆乳",
+              "tounyuu",
+              "豆奶"
+            ],
+            [
+              "を",
+              "o",
+              "提示动作对象"
+            ]
+          ],
+          "n": "「〜できますか／もらえますか」用于礼貌询问是否可以办理或提供。"
+        }
+      },
+      {
+        "fig": "デカフェ",
+        "kana": "デカフェ",
+        "zh": "低咖啡因",
+        "ex": "デカフェにできますか。",
+        "exZh": "可以做成低咖啡因的吗？",
+        "ro": "dekafue",
+        "exKana": "デカフェにできますか。",
+        "exRo": "dekafuenidekimasuka.",
+        "say": "デカフェ",
+        "kj": "",
+        "an": {
+          "p": [
+            [
+              "デカフェ",
+              "dekafue",
+              "低咖啡因"
+            ],
+            [
+              "できますか",
+              "dekimasu ka",
+              "可以……吗？"
+            ]
+          ],
+          "n": "「〜できますか／もらえますか」用于礼貌询问是否可以办理或提供。"
+        }
+      },
+      {
+        "fig": "シロップ",
+        "kana": "シロップ",
+        "zh": "糖浆",
+        "ex": "店員：ガムシロップとミルクはお使いですか。",
+        "exZh": "店员：需要糖浆和奶精吗？",
+        "ro": "shiroppu",
+        "exKana": "てんいん：ガムシロップとミルクはおつかいですか。",
+        "exRo": "ten'in: gamushiropputomirukuhaotsukaidesuka.",
+        "say": "シロップ",
+        "kj": "",
+        "an": {
+          "p": [
+            [
+              "シロップ",
+              "shiroppu",
+              "糖浆"
+            ],
+            [
+              "ですか",
+              "desu ka",
+              "……吗？"
+            ]
+          ],
+          "n": "「店員：」表示店员说的话；「——」后是客人的回答（如有）。先练习听懂提问，再练习回答。"
+        }
+      },
+      {
+        "fig": "テイクアウト",
+        "kana": "テイクアウト",
+        "zh": "外带（咖啡店常用说法）",
+        "ex": "テイクアウトでお願いします。",
+        "exZh": "我要外带。",
+        "ro": "teikuauto",
+        "exKana": "テイクアウトでおねがいします。",
+        "exRo": "teikuautodeonegaishimasu.",
+        "say": "テイクアウト",
+        "kj": "",
+        "an": {
+          "p": [
+            [
+              "テイクアウト",
+              "teikuauto",
+              "外带"
+            ],
+            [
+              "お願いします",
+              "onegai shimasu",
+              "请、麻烦"
+            ]
+          ],
+          "n": "「〜お願いします」是点餐、付款或提出需求时常用的礼貌说法。"
+        }
+      },
+      {
+        "fig": "席",
+        "kana": "せき",
+        "zh": "座位",
+        "ex": "この席、空いていますか。",
+        "exZh": "这个座位有人吗？",
+        "ro": "seki",
+        "exKana": "このせき、あいていますか。",
+        "exRo": "konoseki, aiteimasuka.",
+        "say": "せき",
+        "kj": "",
+        "an": {
+          "p": [
+            [
+              "席",
+              "seki",
+              "座位"
+            ]
+          ],
+          "n": "结合店内实际场景记住这句话，下次可以直接替换菜名或数量使用。"
+        }
+      },
+      {
+        "fig": "コンセント",
+        "kana": "コンセント",
+        "zh": "插座",
+        "ex": "コンセントが使える席はありますか。",
+        "exZh": "有能充电的座位吗？",
+        "ro": "konsento",
+        "exKana": "コンセントがつかえるせきはありますか。",
+        "exRo": "konsentogatsukaerusekihaarimasuka.",
+        "say": "コンセント",
+        "kj": "",
+        "an": {
+          "p": [
+            [
+              "コンセント",
+              "konsento",
+              "插座"
+            ]
+          ],
+          "n": "结合店内实际场景记住这句话，下次可以直接替换菜名或数量使用。"
+        }
+      },
+      {
+        "fig": "Wi-Fi",
+        "kana": "ワイファイ",
+        "zh": "无线网络",
+        "ex": "Wi-Fiのパスワードを教えてください。",
+        "exZh": "请告诉我 Wi-Fi 密码。",
+        "ro": "waifuai",
+        "exKana": "ワイファイのパスワードをおしえてください。",
+        "exRo": "waifuainopasuwādoooshietekudasai.",
+        "say": "ワイファイ",
+        "kj": "",
+        "an": {
+          "p": [
+            [
+              "Wi-Fi",
+              "waifuai",
+              "无线网络"
+            ],
+            [
+              "ください",
+              "kudasai",
+              "请给我／请"
+            ]
+          ],
+          "n": "「〜ください」表示请求对方给某物或做某事。"
+        }
+      },
+      {
+        "fig": "温める",
+        "kana": "あたためる",
+        "zh": "加热",
+        "ex": "このパン、温めてもらえますか。",
+        "exZh": "这个面包能帮我加热吗？",
+        "ro": "atatameru",
+        "exKana": "このパン、あたためてもらえますか。",
+        "exRo": "konopan, atatametemoraemasuka.",
+        "say": "あたためる",
+        "kj": "",
+        "an": {
+          "p": [
+            [
+              "温める",
+              "atatameru",
+              "加热"
+            ]
+          ],
+          "n": "「〜できますか／もらえますか」用于礼貌询问是否可以办理或提供。"
+        }
+      },
+      {
+        "fig": "モーニング",
+        "kana": "モーニング",
+        "zh": "早餐套餐（点饮料常附送吐司等）",
+        "ex": "モーニングは何時までですか。",
+        "exZh": "早餐套餐供应到几点？",
+        "ro": "mōningu",
+        "exKana": "モーニングはなんじまでですか。",
+        "exRo": "mōninguhananjimadedesuka.",
+        "say": "モーニング",
+        "kj": "",
+        "an": {
+          "p": [
+            [
+              "モーニング",
+              "mōningu",
+              "早餐套餐"
+            ],
+            [
+              "ですか",
+              "desu ka",
+              "……吗？"
+            ]
+          ],
+          "n": "句末「ですか」表示礼貌疑问，可直接用于向店员询问。"
+        }
+      },
+      {
+        "fig": "伝票",
+        "kana": "でんぴょう",
+        "zh": "账单（放在桌上，结账时自己拿去收银台）",
+        "ex": "店員：お会計の際は、伝票をレジまでお持ちください。",
+        "exZh": "店员：结账时请把账单拿到收银台。",
+        "ro": "denpyou",
+        "exKana": "てんいん：おかいけいのさいは、でんぴょうをレジまでおもちください。",
+        "exRo": "ten'in: okaikeinosaiha, denpyouorejimadeomochikudasai.",
+        "say": "でんぴょう",
+        "kj": "",
+        "an": {
+          "p": [
+            [
+              "伝票",
+              "denpyou",
+              "账单"
+            ],
+            [
+              "ください",
+              "kudasai",
+              "请给我／请"
+            ]
+          ],
+          "n": "「店員：」表示店员说的话；「——」后是客人的回答（如有）。先练习听懂提问，再练习回答。"
+        }
+      }
+    ]
+  }
+]
+</script>
+
+<script>
+const AUDIO = {};
+const DECK = JSON.parse(document.getElementById("deck").textContent);
+const esc = s => String(s).replace(/[&<>"]/g, c => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" }[c]));
+
+const ALL = [];
+const host = document.getElementById("sections");
+DECK.forEach(sec => {
+  const s = document.createElement("section");
+  s.innerHTML = `<h2>${esc(sec.title)}</h2><p class="rule">${sec.rule}</p><div class="grid"></div>`;
+  const grid = s.querySelector(".grid");
+  sec.cards.forEach(c => {
+    const i = ALL.push(c) - 1;
+    const len = c.fig.length;
+    const el = document.createElement("article");
+    el.className = "card " + sec.id;
+    el.id = "c" + i;
+    el.innerHTML = `
+      <div class="plate">
+        ${c.tag ? `<span class="tag">${esc(c.tag)}</span>` : ""}
+        ${c.kj ? `<span class="kj">${esc(c.kj)}</span>` : ""}
+        <span class="fig ${len > 8 ? "s" : len > 5 ? "m" : ""}">${esc(c.fig)}</span>
+      </div>
+      <div class="body">
+        <span class="kana">${esc(c.kana)}</span>
+        <span class="romaji">${esc(c.ro)}</span>
+        <span class="zh">${esc(c.zh)}</span>
+        <span class="ex"><span class="exline">${c.an ? `<button type="button" class="why" aria-expanded="false" aria-controls="an${i}" title="句子解析" aria-label="解析例句 ${esc(c.ex)}">?</button>` : ""}<b>${esc(c.ex)}</b></span>${c.exKana ? `<span class="exkana">${esc(c.exKana)}</span>` : ""}<span class="exro">${esc(c.exRo)}</span><span>${esc(c.exZh)}</span></span>
+        ${c.an ? `<div class="an" id="an${i}" hidden>
+          <span class="an-h">逐词拆解</span>
+          <div class="an-parts">${c.an.p.map(([jp, ro, m]) => `<span class="part"><b>${esc(jp)}</b><span class="r">${esc(ro)}</span><span class="m">${esc(m)}</span></span>`).join("")}</div>
+          <p class="an-note"><b>要点：</b>${esc(c.an.n)}</p>
+        </div>` : ""}
+        <div class="btns">
+          <button type="button" data-say="${esc(c.say)}" data-i="${i}" aria-label="播放 ${esc(c.kana)}">▶ 单词</button>
+          <button type="button" data-say="${esc(c.ex)}" data-i="${i}" aria-label="播放例句 ${esc(c.ex)}">▶ 例句</button>
+        </div>
+      </div>`;
+    grid.appendChild(el);
+  });
+  host.appendChild(s);
+});
+
+const synth = window.speechSynthesis;
+const note = document.getElementById("note");
+let jaVoice = null, slow = false, current = null;
+function pickVoice() {
+  if (!synth) return;
+  const vs = synth.getVoices();
+  jaVoice = vs.find(v => /^ja/i.test(v.lang) && /google|kyoko|otoya|nanami|haruka/i.test(v.name)) || vs.find(v => /^ja/i.test(v.lang)) || null;
+}
+if (synth) { pickVoice(); synth.onvoiceschanged = pickVoice; }
+if (Object.keys(AUDIO).length) note.textContent = "发音：Microsoft Nanami 神经语音录音（Edge TTS）。";
+else if (!synth) { note.textContent = "当前浏览器不支持语音播放，请换用 Chrome、Edge 或 Safari 打开。"; note.dataset.warn = ""; }
+
+function mark(i) {
+  document.querySelectorAll(".card.playing").forEach(e => e.classList.remove("playing"));
+  if (i != null) document.getElementById("c" + i)?.classList.add("playing");
+}
+let session = 0;
+function stopAll() { session++; if (current) { current.pause(); current = null; } if (synth) synth.cancel(); mark(null); }
+function say(text, i) {
+  return new Promise(res => {
+    const src = AUDIO[text];
+    if (src) {
+      const a = new Audio(src);
+      current = a;
+      a.playbackRate = slow ? 0.75 : 1;
+      a.onplay = () => mark(i);
+      a.onended = a.onerror = a.onpause = () => { mark(null); res(); };
+      a.play().catch(() => { mark(null); res(); });
+      return;
+    }
+    if (!synth) return res();
+    const u = new SpeechSynthesisUtterance(text);
+    u.lang = "ja-JP";
+    if (jaVoice) u.voice = jaVoice;
+    u.rate = slow ? 0.6 : 0.9;
+    u.onstart = () => mark(i);
+    u.onend = u.onerror = () => { mark(null); res(); };
+    synth.speak(u);
+  });
+}
+
+let loop = false, active = false;
+const playAllBtn = document.getElementById("playAll");
+const wait = ms => new Promise(r => setTimeout(r, ms));
+function setRunning(on) { active = on; playAllBtn.textContent = on ? "■ 停止" : "▶ 全部播放"; }
+const LOOP_MAX_MS = 30 * 60 * 1000;  // 循环播放最长 30 分钟，到时自动停止
+function flash(msg) {
+  const base = note.textContent;
+  note.textContent = msg;
+  setTimeout(() => { if (note.textContent === msg) note.textContent = base; }, 10000);
+}
+async function runQueue(items) {
+  stopAll();
+  const my = session, start = Date.now();
+  setRunning(true);
+  do {
+    for (const it of items) {
+      await say(it.text, it.i);
+      if (my !== session) return;
+      if (loop && Date.now() - start >= LOOP_MAX_MS) { setRunning(false); flash("已循环播放 30 分钟，自动停止。"); return; }
+      await wait(items.length > 1 ? 500 : 900);
+      if (my !== session) return;
+    }
+  } while (loop);
+  setRunning(false);
+}
+
+host.addEventListener("click", e => {
+  const b = e.target.closest("button[data-say]");
+  if (b) { runQueue([{ text: b.dataset.say, i: +b.dataset.i }]); return; }
+  const why = e.target.closest("button.why");
+  if (why) {
+    const panel = document.getElementById(why.getAttribute("aria-controls"));
+    const open = why.getAttribute("aria-expanded") !== "true";
+    why.setAttribute("aria-expanded", String(open));
+    panel.hidden = !open;
+    return;
+  }
+  if (e.target.closest(".an")) return;
+  const card = e.target.closest(".card");
+  if (card && document.getElementById("app").classList.contains("quiz")) card.classList.toggle("shown");
+});
+
+playAllBtn.addEventListener("click", () => {
+  if (active) { stopAll(); setRunning(false); return; }
+  runQueue(ALL.map((c, i) => ({ text: c.say, i })));
+});
+
+document.getElementById("loop").addEventListener("click", e => {
+  loop = !loop;
+  e.currentTarget.setAttribute("aria-pressed", String(loop));
+});
+
+document.getElementById("quiz").addEventListener("click", e => {
+  const on = document.getElementById("app").classList.toggle("quiz");
+  document.querySelectorAll(".card.shown").forEach(c => c.classList.remove("shown"));
+  e.currentTarget.setAttribute("aria-pressed", String(on));
+});
+
+document.getElementById("slow").addEventListener("click", e => {
+  slow = !slow;
+  e.currentTarget.setAttribute("aria-pressed", String(slow));
+});
+</script>
+
+</body></html>
